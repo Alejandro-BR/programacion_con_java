@@ -13,7 +13,7 @@ public class T02Ejercicio04 {
     System.out.println(euros + " euros =  " + pesetas + " pecetas.");
 
   //System.out.println(euros + "€  --> " + pesetas + " pta");
-  //System.out.printf("%.2f € --> %d pta\n", euros + pesetas); */
+  //System.out.printf("%.2f € --> %d pta\n", euros + pesetas);
 
   }
 }
