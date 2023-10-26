@@ -15,12 +15,29 @@ public class T02Ejercicio06 {
    //System.out.println(euros + "€  --> " + pesetas + " pta");
    //System.out.printf("%.2f € --> %d pta\n", euros + pesetas);
 
-    System.out.println("***************************");
-    System.out.println("");
-    System.out.println("     Ticket de compra");
-    System.out.println("");
-    System.out.println("***************************");
+    System.out.println(""); //Salto de linea
+    System.out.println("****************************");
+    System.out.println("*                          *");
+    System.out.println("* Ticket de compra         *");
+    System.out.println("*                          *");
+    System.out.println("****************************");
+    System.out.println("*                          *");
+    System.out.println("* Fecha: 26/10/2023        *");
+    System.out.println("*                          *");
+    System.out.println("****************************");
+    System.out.println("*                          *");
+    System.out.println("* Precio base    " + baseImposible + "      *");
+    System.out.println("* Precio + IVA   " + total + "      *");
+    System.out.println("*                          *");
+    System.out.println("****************************");
+    System.out.println("*                          *");
+    System.out.println("* Total:  " + total + "             *");
+    System.out.println("* Efectivo:  " + total + "          *");
+    System.out.println("* Cambio: 0.00             *");
+    System.out.println("*                          *");
+    System.out.println("****************************");
+    System.out.println(""); //Salto de linea
 
 
   }
-}
+} 
