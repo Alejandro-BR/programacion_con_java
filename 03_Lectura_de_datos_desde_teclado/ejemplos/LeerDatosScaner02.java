@@ -4,7 +4,7 @@ import java.util.Scanner;
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-public class LeerDatosScaneners02 {
+public class LeerDatosScaner02 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in); //Creamos un objetos de la clase Scanner, llamado sc
     

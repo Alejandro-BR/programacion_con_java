@@ -6,7 +6,7 @@ import java.util.Scanner; //hay que importar la clase Scanner
  * @author Alejandro Barrionuevo Rosado
  */
 
-public class LeerDatosScaneners01 {
+public class LeerDatosScaner01 {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in, "Windows-1252");  //Creamos un objeto de la clase Scanner, llamado sc
     System.out.println("Introduce tu nombre: ");
