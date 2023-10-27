@@ -13,12 +13,14 @@ public class T02Ejercicio08 {
     char letraO = 'O';
     char letraS = 'S';
     String gatos = (letraG + "" + letraA + "" + letraT + "" + letraO + "" + letraS); 
+    String gatos2 = ("" + letraG +  letraA +  letraT + letraO + letraS); 
 
     //Me daba error al poner las variables char una tras otra con un + entre ellas
     //Cuando lo termine se me ocurrio a ver si funcionaba como con el println y les puse "" entre medio y funciono
     
     System.out.println(""); //SALTO DE LINEA
     System.out.println(gatos);
+    System.out.println(gatos2);
     System.out.println(""); //SALTO DE LINEA
   }
 }
