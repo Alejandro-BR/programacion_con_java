@@ -38,6 +38,9 @@ public class T02Ejercicio06 {
     System.out.println("****************************");
     System.out.println(""); //Salto de linea
 
-
+    //Ejemplo maestro:
+    //system.out.printf("Base imponible %8.2f\n", baseImponible);
+    //system.out.printf("IVA            %8.2f\n", importeIva);
+    //system.out.printf("TOTAL            %8.2f\n", totla);
   }
 } 
