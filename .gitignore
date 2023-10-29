@@ -28,3 +28,6 @@ replay_pid*
 
 #JSON
 *.json
+
+#PDF
+*.pdf
