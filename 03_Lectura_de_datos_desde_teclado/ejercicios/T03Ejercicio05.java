@@ -6,6 +6,7 @@
 import java.util.Scanner; 
 public class T03Ejercicio05 {
     public static void main(String[] args) {
+    System.out.println(""); //SALTO DE PAGINA 
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
     System.out.print("Introduce la altura del rectangulo: ");
     int alturaR = sc.nextInt();
