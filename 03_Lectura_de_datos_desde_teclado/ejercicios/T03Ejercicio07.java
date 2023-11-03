@@ -72,9 +72,9 @@ public class T03Ejercicio07 {
     System.out.println("*                           *");
     System.out.println("*****************************");
     System.out.println("*                           *");
-    System.out.printf("* TOTAL          %8.2f € *\n", total);
-    System.out.printf("* PAGO           %8.2f € *\n", pago);
-    System.out.printf("* CAMBIO         %8.2f € *\n", cambio);
+    System.out.printf("* TOTAL %17.2f € *\n", total);
+    System.out.printf("* PAGO  %17.2f € *\n", pago);
+    System.out.printf("* CAMBIO %16.2f € *\n", cambio);
     System.out.println("*                           *");
     System.out.println("*****************************");
     System.out.println(""); //Salto de linea
