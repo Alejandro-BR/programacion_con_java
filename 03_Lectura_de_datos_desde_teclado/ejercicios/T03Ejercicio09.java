@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class T03Ejercicio09 {
   public static void main(String[] args) {
   
-    double PI = Math. PI;
+    final double PI = Math. PI; //constante 
     double div = 0.33; //1/3
     
     System.out.println(""); //SALTO DE LINEA 
