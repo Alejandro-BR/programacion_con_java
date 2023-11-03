@@ -30,7 +30,7 @@ public class T03Ejercicio12 {
 
     sc.close(); //Cierre del Scanner 
 
-    double nota2 =(((nota1 * 0.40) - media) * 100 / 60) * -1 ; 
+    double nota2 =((media - (nota1 * 0.40)) * 100 / 60); 
 
     System.out.println(""); //SALTO DE LINEA 
     System.out.print("Para tener un " + media + " en el trimestre necesitas sacar un ");
