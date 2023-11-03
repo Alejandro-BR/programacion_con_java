@@ -15,7 +15,7 @@ public class T03Ejercicio03 {
     Scanner sc = new Scanner(System.in); //Creamos un objetos de la clase Scanner, llamado sc"
     
     System.out.print("Introduce las pesetas que quieres convertir: ");
-    double pesetas = sc.nextInt();
+    int pesetas = sc.nextInt();
     
     sc.close(); //Cierre del Scanner; 
 

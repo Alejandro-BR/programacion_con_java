@@ -25,12 +25,17 @@ public class T03Ejercicio02 {
 
     sc.close(); //Cierre del Scanner; 
 
-    double pesetas = (int) (euros * 166.386); 
+    int pesetas = (int) (euros * 166.386); 
     
-    System.out.println(""); //SALTO DE LINEA
-    System.out.print(euros + " €  --> ");
-    System.out.printf(" %.0f", pesetas);  //%.0f para que no le salga .00 como decimales
-    System.out.println(" pta");
-    System.out.println(""); //SALTO DE LINEA
+    System.out.printf("%.2f € --> %d pta", euros, pesetas ); //%d para quitar decimales
+
+
+    //     double pesetas = (int) (euros * 166.386); 
+    
+    // System.out.println(""); //SALTO DE LINEA
+    // System.out.print(euros + " €  --> ");
+    // System.out.printf(" %.0f", pesetas);  //%.0f para que no le salga .00 como decimales
+    // System.out.println(" pta");
+    // System.out.println(""); //SALTO DE LINEA
   }
 }
