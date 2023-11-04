@@ -4,7 +4,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 
-public class T01Ejercicio10 {
+public class T01Ejercicio10_PRUEBA2 {
   public static void main(String[] args) {
     System.out.println("");
     System.out.println(" \033[93m               ╱╲      ╱╲");
