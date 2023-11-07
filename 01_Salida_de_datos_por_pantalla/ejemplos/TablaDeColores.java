@@ -3,9 +3,7 @@
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-import colors.ConsoleColors; //biblioteca
-
-  import colors.ConsoleColors;  //llamar a la biblioteca colores
+import colors.ConsoleColors; //bibliotecaS
   public class TablaDeColores {
     public static void main(String[] args) {
       System.out.println("┌────────┬───────────┬────────┬────────────────┐");
