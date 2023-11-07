@@ -1,5 +1,5 @@
 import java.util.Scanner; //Importar Scanner
-import java.util.Locale;  //Importar para poder usar decimales
+//import java.util.Locale;  //Importar para poder usar decimales
 /**
  * Ejercicio 1: Realiza un programa que pida dos numero y que luego muestre el resultado de su multiplicación.
  * VERSION 2 CON DOUBLE
