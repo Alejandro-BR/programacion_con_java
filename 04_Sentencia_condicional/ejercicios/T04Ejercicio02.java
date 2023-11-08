@@ -22,7 +22,7 @@ public class T04Ejercicio02 {
       System.out.println("¡Buenos dias!");
     } else if ((hora >= 13) && (hora <= 20)) {
       System.out.println("¡Buenas tardes!");
-    }else if ((hora >= 21) && (hora <= 5)) {
+    }else if (((hora >= 21) && (hora >= 24))  || ((hora <= 5) && (hora > 0))) {
       System.out.println("¡Buenas noches!");
     }else{
       System.out.println("Introduce una hora valida");
