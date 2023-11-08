@@ -20,16 +20,16 @@ public class T04Ejercicio05 {
     System.out.println("Este programa resuelve ecuaciones de primer grado del tipo ax+b = 0"); 
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
     System.out.print("Por favor, introduzca el valor de a: ");
-    int a = sc.nextInt();
+    double a = sc.nextDouble();
     System.out.print("Ahora introduzca el valor de b: ");
-    int b = sc.nextInt();
+    double b = sc.nextDouble();
     sc.close(); //Cierre del Scanner 
 
     if (a != 0) {
       //ax + b = 0
       // x = -b / a 
       double x = (b * (-1))/a;
-      System.out.println("X = " + x);
+      //System.out.println("X = " + x);
       System.out.printf("x = %1.1f",x);
     } else{
       System.out.println("Esa ecuacion no tiene solución real.");
