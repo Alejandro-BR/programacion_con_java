@@ -26,10 +26,9 @@ public class T04Ejercicio05 {
     sc.close(); //Cierre del Scanner 
 
     if (a != 0) {
-      //ax + b = 0
-      // x = -b / a 
-      double x = (b * (-1))/a;
-      //System.out.println("X = " + x);
+      //double x = -b / a ;    //No funciona porque no tiene parentesis
+      //double x = (b * (-1))/a; //Funciona pero es mas largo
+      double x = (-b/a);
       System.out.printf("x = %1.1f",x);
     } else{
       System.out.println("Esa ecuacion no tiene solución real.");
