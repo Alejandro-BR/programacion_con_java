@@ -50,7 +50,7 @@ public class T04Ejercicio20 {
       }
     }
 
-    //Numeros de 6 cifras
+    //Numeros de 6 cifras   NO ESTA TERMINADO
     if ((n >= 100000) && (n<1000000)) {
       if (((n/10000) == (n % 10)) && (((n/1000)%10) == ((n / 10)%10))) {
       capicua = true;
