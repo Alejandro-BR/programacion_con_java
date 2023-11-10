@@ -38,6 +38,7 @@ public class T04Ejercicio22 {
         diasTrascurridos = 4;
         break;
       default:
+        System.out.println("No has introducido un valor correcto");
         break;
     }
 
@@ -48,5 +49,7 @@ public class T04Ejercicio22 {
 
     int minutosTrascurridos = (diasTrascurridos * 24 * 60) + (horas * 60 + minutos);
     System.out.println("Faltan " + (MINUTOSTOTALES - minutosTrascurridos) + " minutos para llegar al fin de semana");
+
+    sc.close(); //Cierre del Scanner 
   }
 }
