@@ -25,6 +25,9 @@ public class T04Ejercicio20 {
     }
 
     //Numeros de 3 cifras
+    //1º cifra: (n/100)
+    //2º cifra: INDIFERENTE
+    //3º cifra: (n % 10)
     if ((n >= 100) && (n<1000)) {
       if ((n/100) == (n % 10)) {
         capicua = true;
@@ -40,7 +43,15 @@ public class T04Ejercicio20 {
       }
     }
 
+    //Numeros de 5 cifras
     if ((n >= 10000) && (n<100000)) {
+      if (((n/10000) == (n % 10)) && (((n/1000)%10) == ((n / 10)%10))) {
+      capicua = true;
+      }
+    }
+
+    //Numeros de 6 cifras
+    if ((n >= 100000) && (n<1000000)) {
       if (((n/10000) == (n % 10)) && (((n/1000)%10) == ((n / 10)%10))) {
       capicua = true;
       }

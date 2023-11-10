@@ -37,7 +37,7 @@ public class T04Ejercicio10 {
       case "marzo":
         if (dia >= 21) {
           System.out.println("Tu signo es ARIES ♈");
-        } else if (dia >= 1) {
+        } else if (dia <= 20) {
           System.out.println("Tu signo es PISCiS ♓ ");
         }
         break;
