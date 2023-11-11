@@ -33,7 +33,7 @@ public class T04Ejercicio13 {
     boolean opcion6 = (num3 >= num2) && (num2 >= num1);
 
     System.out.println(""); //SALTO DE LINEA 
-    
+
     if (opcion1) {
       System.out.println(num1 + "  " + num2 + "  " + num3);
     } else if (opcion2) {
@@ -48,6 +48,31 @@ public class T04Ejercicio13 {
       System.out.println(num3 + "  " + num2 + "  " + num1);
     }
 
-    System.out.println(""); //SALTO DE LINEA 
+    System.out.println(""); //SALTO DE LINEA
+    
+    //Ejercicio del profesor: (El mio funciona igual pero este modelo es mas eficiente)
+    // // ordenación de los dos primeros números
+    // if (num1 > num2) {
+    //   int aux = num1;
+    //   num1 = num2;
+    //   num2 = aux;
+    // }
+
+    // // ordenación de los dos últimos números
+    // if (num2 > num3) {
+    //     int aux = num2;
+    //     num2 = num3;
+    //     num3 = aux;
+    // }
+    
+    // // se vuelven a ordenar los dos primeros
+
+    // if (num1 > num2) {
+    //     int aux = num1;
+    //     num1 = num2;
+    //     num2 = aux;
+    // }
+    // System.out.println("Los números introducidos ordenados de menor a mayor son " + num1 + ", " + num2 + " y " + num3 + ".");
+
   }
 }
