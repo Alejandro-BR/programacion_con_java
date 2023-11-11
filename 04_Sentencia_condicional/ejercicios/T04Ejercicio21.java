@@ -46,16 +46,14 @@ public class T04Ejercicio21 {
     System.out.print("Nota del segundo control: ");
     double nota2 = sc.nextDouble();    
 
-    sc.close(); //Cierre del Scanner 
-
     double media = (nota1 + nota2) / 2;
     if (media < 5) {
       System.out.print("¿Cual ha sido el resultado de la recuperacion? (apto/no apto): ");
       String recuperacion = System.console().readLine(); 
 
-      if ((recuperacion == "apto") || (recuperacion == "APTO") || (recuperacion == "Apto")) {
+      if ((recuperacion.equals("apto")) || (recuperacion.equals("APTO")) || (recuperacion.equals("Apto"))) {
         System.out.println("Tu nota de Programacion es 5");
-      } else if ((recuperacion == "no apto") || (recuperacion == "NO APTO") || (recuperacion == "No apto")) {
+      } else if ((recuperacion.equals("no apto")) || (recuperacion.equals("NO APTO")) || (recuperacion.equals("No apto"))) {
         System.out.printf("Tu nota de Programación es %4.1f ",media);
       }
     }
@@ -64,6 +62,7 @@ public class T04Ejercicio21 {
       System.out.printf("Tu nota de Programación es %4.1f ",media); 
     }
 
+    sc.close(); //Cierre del Scanner 
 
     System.out.println(""); //SALTO DE LINEA 
 
