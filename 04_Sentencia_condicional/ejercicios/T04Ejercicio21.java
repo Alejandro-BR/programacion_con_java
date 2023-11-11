@@ -55,10 +55,15 @@ public class T04Ejercicio21 {
 
       if ((recuperacion == "apto") || (recuperacion == "APTO") || (recuperacion == "Apto")) {
         System.out.println("Tu nota de Programacion es 5");
+      } else if ((recuperacion == "no apto") || (recuperacion == "NO APTO") || (recuperacion == "No apto")) {
+        System.out.printf("Tu nota de Programación es %4.1f ",media);
       }
     }
     
-    System.out.printf("Tu nota de Programación es %4.1f ",media); 
+    if (media >= 5) {
+      System.out.printf("Tu nota de Programación es %4.1f ",media); 
+    }
+
 
     System.out.println(""); //SALTO DE LINEA 
 
