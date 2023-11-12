@@ -129,13 +129,30 @@ public class T04Ejercicio26 {
     System.out.println(""); //SALTO DE LINEA 
     System.out.println("Aqui tienes sus entradas. Gracias por su compra.");
 
-    if (dia.equals("jueves")) {
+    if ((dia.equals("jueves")) && (entradas % 2 == 0)) {
+
       System.out.printf("%-29s %2d\n","Entradas de parejas",entradas); 
       System.out.printf("%-29s %5.2f €\n","Precio por entrada de pareja",(precioEntrada * 2));
-    }else {
+
+    } else if ((dia.equals("jueves")) && (entradas % 2 != 0)) {
+
+      int entradasJ = entradas % 2;
+      System.out.printf("%-29s %2d\n","Entradas de parejas",(entradas - entradasJ)); 
+      System.out.printf("%-29s %5.2f €\n","Precio por entrada de pareja",(precioEntrada * 2));
+      System.out.printf("%-29s %2d\n","Entradas individuales",entradasJ); 
+      System.out.printf("%-29s %5.2f €\n","Precio por entrada individual",8.00);
+      
+      total = (precioEntrada * (entradas - entradasJ)) + (8 * entradasJ);
+      descuentoApli = total * descuento;
+      pagar = total - descuentoApli;
+
+    } else {
+
       System.out.printf("%-29s %2d\n","Entradas individuales",entradas); 
       System.out.printf("%-29s %5.2f €\n","Precio por entrada individual",precioEntrada); 
+
     }
+
     System.out.printf("%-28s %6.2f €\n","Total",total); 
     System.out.printf("%-28s %6.2f €\n","Descuento",descuentoApli);
     System.out.printf("%-28s %6.2f €\n","A pagar",pagar);
