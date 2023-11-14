@@ -30,8 +30,11 @@ public class T04Ejercicio29 {
   public static void main(String[] args) {
     String comer;
     String beber;
-    String pitufo;
+    String pitufo = "";
+    double precioBebida = 0;
+    double precioComida = 0;
 
+    System.out.println(""); //SALTO DE LINEA 
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
     System.out.print("¿Qué ha tomado de comer? (palmera, donut o pitufo): ");
     comer = sc.next();
@@ -43,6 +46,45 @@ public class T04Ejercicio29 {
     beber = sc.next();
     sc.close(); //Cierre del Scanner 
 
+    switch (beber) {
+      case "zumo":
+        precioBebida = 1.50;
+        break;
+      case "cafe":
+        precioBebida = 1.30;
+        break;
+      default:
+        System.out.println("No introduciste una bebida");
+        break;
+    }
 
+    switch (comer) {
+      case "donut":
+        precioComida = 1;
+        break;
+      case "palmera":
+        precioComida = 1.40;
+        break;
+      case "pitufo":
+        if (pitufo.equals("aceite")) {
+          precioComida = 1.20;
+        } else if (pitufo.equals("tortilla")){
+          precioComida = 1.60;
+        }
+        break;
+      default:
+        System.out.println("No introduciste una comida");
+        break;
+    }
+
+    System.out.println(""); //SALTO DE LINEA 
+    if (comer.equals("pitufo")) {
+      System.out.printf("%-5s con %5s: %4.2f€\n",comer,pitufo,precioComida); 
+    } else {
+      System.out.printf("%-5s: %4.2f€\n",comer,precioComida); 
+    }
+    System.out.printf("%-4s: %4.2f€\n",beber,precioBebida);
+    System.out.printf("Total desayuno: %4.2f€\n",(precioBebida + precioComida));
+    System.out.println(""); //SALTO DE LINEA 
   }
 }
