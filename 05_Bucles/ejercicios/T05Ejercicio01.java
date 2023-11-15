@@ -18,6 +18,8 @@ public class T05Ejercicio01 {
         System.out.println("Es multiplo de 5 el numero " + i);
         System.out.println(""); //SALTO DE LINEA 
       }
+
+      //Podria en vez de uno en uno pasar de 5 en 5 y ahorrarme todo lo demas 
     }
 
   }
