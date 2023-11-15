@@ -8,7 +8,7 @@ public class T05Ejercicio02 {
     int i = 1;
     int multiplos = 0;
     while (i <= 100) {
-      multiplos = 5 % i;
+      multiplos = i % 5;
       if (multiplos == 0) {
         System.out.println("Es multiplo de 5 el numero " + i);
         System.out.println(""); //SALTO DE LINEA 

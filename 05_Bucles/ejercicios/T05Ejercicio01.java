@@ -13,7 +13,7 @@ public class T05Ejercicio01 {
 
     for (int i = 0; i <= 100; i++){
       // System.out.println(i);
-      multiplos = 5 % i;
+      multiplos = i % 5;
       if (multiplos == 0) {
         System.out.println("Es multiplo de 5 el numero " + i);
         System.out.println(""); //SALTO DE LINEA 
