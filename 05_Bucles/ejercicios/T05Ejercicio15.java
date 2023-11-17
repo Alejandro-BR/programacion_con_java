@@ -32,6 +32,5 @@ public class T05Ejercicio15 {
 
     System.out.println(""); //SALTO DE LINEA
 
-    //No me sale
   }
 }

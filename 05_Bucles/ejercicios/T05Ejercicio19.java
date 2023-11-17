@@ -15,8 +15,6 @@ public class T05Ejercicio19 {
     System.out.println(""); //SALTO DE LINEA 
     System.out.println("Entre estos digitos elige el que quieres usar en la piramide: ");
     System.out.println(" * + - $ & (Tambien se permite cualquier otro)");
-    System.out.println("Elige que sea una piramide normal (1) o invertida (2).");
-
     System.out.println(""); //SALTO DE LINEA 
     
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
