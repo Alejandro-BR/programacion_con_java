@@ -25,7 +25,7 @@ public class T05Ejercicio15 {
     for (int i = exponente; i >= 1; i--){
       //double potencia = Math.pow(base, i);
       for (int j = 0; j < exponente; j++){
-        potencia *= base;
+        potencia = base * i;
       }
       System.out.printf("%-2d con exponente %-2d =  %-2.0f \n",base, i, potencia); 
     }
