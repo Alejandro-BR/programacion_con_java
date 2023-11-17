@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class T05Ejercicio20 {
   public static void main(String[] args) {
-    String digito = " ";
+    String simbolo = " ";
 
     System.out.println(""); //SALTO DE LINEA 
 
@@ -20,8 +20,8 @@ public class T05Ejercicio20 {
     System.out.println(""); //SALTO DE LINEA 
     
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
-    System.out.print("Introduce el digito: ");
-    digito = sc.nextLine();
+    System.out.print("Introduce el simbolo: ");
+    simbolo = sc.nextLine();
     System.out.print("Introduce la altura: ");
     int altura = sc.nextInt();
     sc.close(); //Cierre del Scanner 
@@ -31,18 +31,23 @@ public class T05Ejercicio20 {
       for (int l = 1; l <= altura; l++){
         System.out.print(" ");
       }
-      System.out.println(digito);
-      for (int i = 1; i <= altura - 1; i++){
+      System.out.println(simbolo);
+      for (int i = 1; i <= altura - 1; i++){   //ESPACIOS
         for (int j = 1; j <= (altura - i); j++){
           System.out.print(" "); 
         }
-        for(int k = 1; k <= (3*i) ; k++ ){
-          System.out.print(digito);
+        System.out.print(simbolo);   //PRIMER SIMBOLO DE CADA LINEA
+        for(int k = 1; k <= (3* (i - 2)) ; k++ ){   //ESPACIOS DENTRO DEL TRIANGULO
+          System.out.print(" ");    
         }
+        System.out.print(simbolo); //SEGUNDO SIMBOLO DE CADA LINEA
         System.out.println(" "); //SALTO DE LINEA 
       }
+      for (int u = 1; u <= altura * 2; u++){  //ESTO ES PARA LA ULTIMA LINEA
+        System.out.print(simbolo);
+      }
     } else if (altura == 1) {
-      System.out.println(" " + digito);
+      System.out.println(" " + simbolo);
     }  else {
       System.out.println("Introduce un valor correcto.");
     }
