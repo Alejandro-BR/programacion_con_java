@@ -20,11 +20,13 @@ public class T05Ejercicio11 {
     sc.close(); //Cierre del Scanner
 
     System.out.println(""); //SALTO DE LINEA 
-    
+      System.out.printf("%5s  |%8s  |%9s \n","n","n2","n3"); 
+      System.out.println("-------------------------------");
+
     for(int i = numeroIntroducido + 1; i <= (numeroIntroducido + 5); i++){
       cuadrado = Math.pow(i, 2);
       cubo = Math.pow(i, 3);
-      System.out.printf("%-5d %5.0f %5.0f \n",i,cuadrado,cubo); 
+      System.out.printf("%5d  |%8.0f  |%9.0f \n",i,cuadrado,cubo); 
     }
     System.out.println(""); //SALTO DE LINEA
   }
