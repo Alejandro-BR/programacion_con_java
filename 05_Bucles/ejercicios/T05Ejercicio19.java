@@ -27,23 +27,27 @@ public class T05Ejercicio19 {
     sc.close(); //Cierre del Scanner 
 
     System.out.println(""); //SALTO DE LINEA 
-
-    for (int i = 1; i <= altura; i++){
-      for (int k = 1; k <= (altura - i); k += 2){
-        System.out.print(" "); 
+    if (altura > 1) {
+      for (int l = 1; l <= altura; l++){
+        System.out.print(" ");
       }
-      for(int j = 0; j <= (2*i) ; j++ ){
-        System.out.print(digito);
+      System.out.println(digito);
+      for (int i = 1; i <= altura - 1; i++){
+        for (int j = 1; j <= (altura - i); j++){
+          System.out.print(" "); 
+        }
+        for(int k = 1; k <= (3*i) ; k++ ){
+          System.out.print(digito);
+        }
+        System.out.println(" "); //SALTO DE LINEA 
       }
-      System.out.println(" "); //SALTO DE LINEA 
+    } else if (altura == 1) {
+      System.out.println(" " + digito);
+    }  else {
+      System.out.println("Introduce un valor correcto.");
     }
 
     System.out.println(""); //SALTO DE LINEA
 
-    // System.out.println("    " + digito);
-    // System.out.println("   " + digito + " " + digito);
-    // System.out.println("  " + digito + "   " + digito);
-    // System.out.println(" " + digito + "     " + digito);
-    // System.out.println(digito + digito + digito + digito + digito + digito + digito + digito + digito);
   }
 }
