@@ -22,10 +22,10 @@ import java.util.Scanner;
 public class T05Ejercicio30 {
   public static void main(String[] args) {
     String dia1 = "";
-    int dia1Numero;
+    int dia1Numero = 0;
     int hora1;
     String dia2 = "";
-    int dia2Numero;
+    int dia2Numero = 0;
     int hora2;
 
 
@@ -40,15 +40,14 @@ public class T05Ejercicio30 {
       hora1 = sc.nextInt();
     } while (hora1 > 25);
 
+
+    System.out.println("Por favor, introduzca la segunda hora.");
+    System.out.print("Dia: ");
+    dia2 = sc.next();
     do {
-      System.out.println("Por favor, introduzca la segunda hora.");
-      System.out.print("Dia: ");
-      dia2 = sc.next();
-      do {
-        System.out.print("Hora: ");
-        hora2 = sc.nextInt();
-      } while (hora2 > 25);
-    } while (dia2 != dia1);
+      System.out.print("Hora: ");
+      hora2 = sc.nextInt();
+    } while (hora2 > 25);
 
     sc.close(); //Cierre del Scanner 
 
@@ -106,6 +105,13 @@ public class T05Ejercicio30 {
         break;
     }
 
-    
+    int suma1 = dia1Numero * 24 + hora1;
+    int suma2 = dia2Numero * 24 + hora2;
+
+    System.out.println(dia1Numero);
+    System.out.println(dia2Numero);
+    System.out.println(suma2 - suma1);
+
+    System.out.println(""); //SALTO DE LINEA 
   }
 }
