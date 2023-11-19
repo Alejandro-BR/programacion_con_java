@@ -37,12 +37,16 @@ public class T05Ejercicio26 {
       primerNumero = numero / 10;
       ultimoNumero = numero % 10;
       
-      if (digitoBuscado == primerNumero) {
-        System.out.println("El digito buscado es igual al primer digito del numero introducido.");
-      } else if (digitoBuscado == ultimoNumero) {
-        System.out.println("El digito buscado es igual al ultimo digito del numero introducido.");
-      } else  {
-        System.out.println("El digito que buscas no se encuentra dentro del numero dado.");
+      if (primerNumero == ultimoNumero){
+        System.out.println("Ambos digitos son iguales al numero digito buscado.");
+      } else {
+        if (digitoBuscado == primerNumero) {
+          System.out.println("El digito buscado es igual al primer digito del numero introducido.");
+        } else if (digitoBuscado == ultimoNumero) {
+          System.out.println("El digito buscado es igual al ultimo digito del numero introducido.");
+        } else  {
+          System.out.println("El digito que buscas no se encuentra dentro del numero dado.");
+        }
       }
       
     } else if (numero < 1000){ //Numeros de tres cifras
@@ -53,15 +57,17 @@ public class T05Ejercicio26 {
       
       if (digitoBuscado == primerNumero) {
         System.out.println("El digito buscado es igual al primer digito del numero introducido.");
-      } else if (digitoBuscado == ultimoNumero) {
+      } 
+      if (digitoBuscado == segundoNumero) {
+        System.out.println("El digito buscado es igual al digito central del numero introducido.");
+      }
+      if (digitoBuscado == ultimoNumero) {
         System.out.println("El digito buscado es igual al ultimo digito del numero introducido.");
-      } else if (digitoBuscado == segundoNumero) {
-        System.out.println("El digito buscado es igual al digito del medio del numero introducido.");
       } else  {
         System.out.println("El digito que buscas no se encuentra dentro del numero dado.");
       }
       
-    } else if (numero < 10000) {
+    } else if (numero < 10000) { //Numeros de cuatro cifras
       
       primerNumero = numero / 1000;
       segundoNumero = (numero/100) % 10 ;
@@ -70,15 +76,20 @@ public class T05Ejercicio26 {
 
       if (digitoBuscado == primerNumero) {
         System.out.println("El digito buscado es igual al primer digito del numero introducido.");
-      } else if (digitoBuscado == ultimoNumero) {
-        System.out.println("El digito buscado es igual al ultimo digito del numero introducido.");
-      } else if (digitoBuscado == segundoNumero) {
+      } 
+      if (digitoBuscado == segundoNumero) {
         System.out.println("El digito buscado es igual al segundo digito del numero introducido.");
-      } else if (digitoBuscado == tercerNumero) {
+      }
+      if (digitoBuscado == tercerNumero) {
         System.out.println("El digito buscado es igual al tercer digito del numero introducido.");
       }else  {
         System.out.println("El digito que buscas no se encuentra dentro del numero dado.");
       }
+      if (digitoBuscado == ultimoNumero) {
+        System.out.println("El digito buscado es igual al ultimo digito del numero introducido.");
+      }
+    } else { //ERROR 
+      System.out.println("No introduciste un numero correcto.");
     }
 
     System.out.println(""); //SALTO DE LINEA 
