@@ -34,9 +34,7 @@ public class T05Ejercicio34 {
     System.out.print("Introduce otro numero: ");
     long num2 = sc.nextLong();
     sc.close(); //Cierre del Scanner 
-
     
-
   }
 }
 

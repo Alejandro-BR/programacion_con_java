@@ -22,6 +22,17 @@ public class T05Ejercicio25 {
     System.out.println(""); //SALTO DE LINEA
     sc.close(); //Cierre del Scanner
     
+    int copiaNumero = numero;
+    while (copiaNumero > 0) {
+      System.out.print(copiaNumero % 10);
+      copiaNumero /= 10;
+    }
+
+    System.out.println(""); //SALTO DE LINEA 
+
+
+    //Mi version aunque no correcta hace lo mismo:
+    
     if (numero < 10){
       
       System.out.println(numero);

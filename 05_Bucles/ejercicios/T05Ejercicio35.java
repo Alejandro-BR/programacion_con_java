@@ -23,12 +23,18 @@ public class T05Ejercicio35 {
     int altura = sc.nextInt();
     sc.close(); //Cierre del Scanner 
 
-    for (int i = 0; i < altura; i++){
-        System.out.print("*");
-        for (int j = 0; j < altura - 2; j++){
+    for (int i = 1; i < altura; i++){
+        for (int j = 0; j < i; j++){
           System.out.print(" ");
         }
-        System.out.println("*");
+        System.out.print("*");
+        for (int j = 0; j < i + 2; j++){
+          System.out.print(" ");
+        }
+        for (int j = 0; j < i + 2; j++){
+          
+        }
+        System.out.println(""); //SALTO DE LINEA 
     }
   }
 }
