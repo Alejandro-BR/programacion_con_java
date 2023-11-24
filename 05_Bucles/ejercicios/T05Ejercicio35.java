@@ -31,9 +31,6 @@ public class T05Ejercicio35 {
         for (int j = 0; j < i + 2; j++){
           System.out.print(" ");
         }
-        for (int j = 0; j < i + 2; j++){
-          
-        }
         System.out.println(""); //SALTO DE LINEA 
     }
   }
