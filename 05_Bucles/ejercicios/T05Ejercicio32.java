@@ -26,8 +26,7 @@
  * 
  * 
  * @author Alejandro Barrionuevo Rosado
- */
-import java.util.Scanner; 
+ */ 
 public class T05Ejercicio32 {
   public static void main(String[] args) {
     System.out.print("Por favor, introduzca un número entero positivo: ");
