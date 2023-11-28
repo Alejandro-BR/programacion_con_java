@@ -24,25 +24,24 @@ public class T05Ejercicio41 {
       int digito;
 
       Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
+      System.out.println(""); //SALTO DE LINEA 
       System.out.print("Por favor, introduzca un número entero positivo: ");
       long numero = sc.nextLong();
       sc.close(); //Cierre del Scanner
       long copiaNumero = numero;
 
       while (copiaNumero > 0) {
-        digito =  (int) (copiaNumero % 10);     //Obtenemos el digito de las unidades, decenas, centenas...del resto de dividir por 10
-        if (digito != 0) {                      //Si el dígito es un 0, no lo contamos ni como par ni como impar
-          if (digito % 2 == 0) {
+        digito =  (int) (copiaNumero % 10);    
+          if ((digito % 2 == 0) && (digito != 0)) {
             pares++;
-          } else {
+          } else if ((digito % 2 != 0) && (digito != 0)) {
             impares++;
-          }
-        }
-        copiaNumero /= 10;      //Buscamos la siguiente cifra
+          } 
+        copiaNumero /= 10;    //Buscamos la siguiente cifra
       }
       
-      System.out.println("El " + numero + " contiene " + pares + " dígitos pares y " + impares + " impares."); 
-      
+      System.out.println("El " + numero + " contiene " + pares + " dígitos pares y " + impares + " dígitos impares."); 
+      System.out.println(""); //SALTO DE LINEA 
     } catch (Exception e) {
       System.out.println(""); //SALTO DE LINEA 
       System.out.println("Error de mensaje: " + e.getMessage());
