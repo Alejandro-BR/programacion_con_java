@@ -30,12 +30,12 @@ public class T05Ejercicio39 {
       
       System.out.println(""); //SALTO DE LINEA 
 
-      for (int i = 1; i <= numero; i++){
+      for (int i = 1; i <= numero + 6; i++){
         for (int j = i; j <= i; j++){
           factorial *= j;
         }
         System.out.println(i + "! = " + factorial);
-      }
+      } 
       System.out.println(""); //SALTO DE LINEA 
 
     } catch (Exception e) {
