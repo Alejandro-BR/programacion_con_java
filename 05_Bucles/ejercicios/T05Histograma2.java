@@ -72,29 +72,30 @@ public class T05Histograma2 {
       for (int i = 0; i < numeroDigitos; i++){
         digitos = numeroVolteado % 10;
         numeroVolteado /= 10;
-        copiaNumeroDigitos--;
 
         // ---
-        for (int j = 0; j < digitos; j++){
-          System.out.print(" --- ");
+        for (int j = 0; j < digitos + 1; j++){
+          System.out.print(" ---");
         }
         System.out.println(""); //SALTO DE LINEA 
 
+        System.out.print("| " + digitos + " |"); //Escribir el numero
+
         // | * | 
         for (int j = 0; j < digitos; j++){
-          System.out.print("|");
           System.out.print(" * ");
           System.out.print("|");
         }
         System.out.println(""); //SALTO DE LINEA 
 
-        if (copiaNumeroDigitos < 2){
-          for (int j = 0; j < digitos; j++){
-            System.out.print(" --- ");
+        if (copiaNumeroDigitos == 1){
+          for (int j = 0; j < digitos + 1; j++){
+            System.out.print(" ---");
           }
           System.out.println(""); //SALTO DE LINEA 
         }
 
+        copiaNumeroDigitos--;
       }
   System.out.println(""); //SALTO DE LINEA 
 
