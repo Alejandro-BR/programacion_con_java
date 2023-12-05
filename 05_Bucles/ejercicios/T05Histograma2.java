@@ -1,4 +1,3 @@
-
 /**
  * Ejercicio Hitograma: Debes crear un programa que pida una serie de números entre 0 y 9.
  * El programa seguirá admitiendo números hasta que se introduzca uno negativo. 
@@ -56,7 +55,21 @@ public class T05Histograma2 {
         }
       }
 
-      copiaNumeroDigitos += numeroDigitos; // Para poder saber cual es el ultimo numero
+
+      //Para saber cual es el numero mas grande
+      int copiaDigitos = digitos;
+      int copiaNumeroVolteado = numeroVolteado;
+      int numeroMayor = 0;
+
+      for (int i = 0; i < numeroDigitos; i++) {
+        copiaDigitos = copiaNumeroVolteado % 10;
+        copiaNumeroVolteado /= 10;
+        if (copiaDigitos > numeroMayor ) {
+          numeroMayor = copiaDigitos;
+        }
+      }
+
+      copiaNumeroDigitos = numeroDigitos; // Para poder saber cual es el ultimo numero
 
       // Dibujar
       for (int i = 0; i < numeroDigitos; i++) {
@@ -64,7 +77,7 @@ public class T05Histograma2 {
         numeroVolteado /= 10;
 
         // ---
-        for (int j = 0; j < digitos + 1; j++) {
+        for (int j = 0; j < numeroMayor + 1; j++) {
           System.out.print(" ---");
         }
         System.out.println(""); // SALTO DE LINEA
@@ -77,10 +90,16 @@ public class T05Histograma2 {
           System.out.print("|");
         }
 
+        // |   |
+        for (int j = 0; j < numeroMayor - digitos; j++) {
+          // System.out.print(" * ");
+          System.out.print("   |");
+        }
+
         System.out.println(""); // SALTO DE LINEA
 
         if (copiaNumeroDigitos == 1) {
-          for (int j = 0; j < digitos + 1; j++) {
+          for (int j = 0; j < numeroMayor + 1; j++) {
             System.out.print(" ---");
           }
           System.out.println(""); // SALTO DE LINEA
