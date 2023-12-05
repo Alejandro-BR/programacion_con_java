@@ -17,6 +17,17 @@
  * Añadir los caracteres - - - y | para formar una tabla, teniendo en cuenta el número de columnas indicado anteriormente.
  * Rellenar con caracteres cada fila, según la cifra que corresponda en cada caso.
  * 
+ * Comentario esplicativo del fallo del codigo:
+ * Despues de muchos intentos no consegui poner los numeros separados es decir:
+ * 1
+ * 2
+ * 3
+ * -1
+ * Si no que lo hice asi 
+ * 123
+ * -1
+ * Aun quitando este detalle el resto lo hace igual que el ejercicio.
+ * 
  * @author Alejandro Barrionuevo Rosado
  */
 import java.util.Scanner;
@@ -54,7 +65,6 @@ public class T05Histograma2 {
           numeroDigitos++;
         }
       }
-
 
       //Para saber cual es el numero mas grande
       int copiaDigitos = digitos;
