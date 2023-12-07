@@ -1,4 +1,3 @@
-
 /**
  * Ejercicio 48: Realiza un programa que diga los dígitos que aparecen y los que no aparecen
  * en un número entero introducido por teclado. El orden es el que se muestra en
@@ -35,10 +34,10 @@ import java.util.Scanner;
 public class T05Ejercico48 {
   public static void main(String[] args) {
     try {
-      int numeroAuxiliar;
-      int copiaNumero;
-      int digito;
-      int numeroVolteado = 0;
+      long numeroAuxiliar;
+      long copiaNumero;
+      long digito;
+      long numeroVolteado = 0;
 
       boolean num0 = false;
       boolean num1 = false;
@@ -55,7 +54,7 @@ public class T05Ejercico48 {
 
       System.out.println(""); // SALTO DE LINEA
       System.out.print("Introduzca un número entero: ");
-      int numero = sc.nextInt();
+      long numero = sc.nextLong();
       sc.close(); // Cierre del Scanner
 
       copiaNumero = numero;
@@ -72,79 +71,100 @@ public class T05Ejercico48 {
         digito %= 10;
         numeroAuxiliar /= 10;
         if (digito == 0) {
-          System.out.print(digito);
           num0 = true;
         }
         if (digito == 1) {
-          System.out.print(digito);
           num1 = true;
         }
         if (digito == 2) {
-          System.out.print(digito);
           num2 = true;
         }
         if (digito == 3) {
-          System.out.print(digito);
           num3 = true;
         }
         if (digito == 4) {
-          System.out.print(digito);
           num4 = true;
         }
         if (digito == 5) {
-          System.out.print(digito);
           num5 = true;
         }
         if (digito == 6) {
-          System.out.print(digito);
           num6 = true;
         }
         if (digito == 7) {
-          System.out.print(digito);
           num7 = true;
         }
         if (digito == 8) {
-          System.out.print(digito);
           num8 = true;
         }
         if (digito == 9) {
-          System.out.print(digito);
           num9 = true;
         }
+      }
+
+      if (num0 == true) {
+        System.out.print("0 ");
+      }
+      if (num1 == true) {
+        System.out.print("1 ");
+      }
+      if (num2 == true) {
+        System.out.print("2 ");
+      }
+      if (num3 == true) {
+        System.out.print("3 ");
+      }
+      if (num4 == true) {
+        System.out.print("4 ");
+      }
+      if (num5 == true) {
+        System.out.print("5 ");
+      }
+      if (num6 == true) {
+        System.out.print("6 ");
+      }
+      if (num7 == true) {
+        System.out.print("7 ");
+      }
+      if (num8 == true) {
+        System.out.print("8 ");
+      }
+      if (num9 == true) {
+        System.out.print("9 ");
       }
 
       System.out.println(""); // SALTO DE LINEA
       System.out.print("Dígitos que no aparecen:  ");
 
       if (num0 == false) {
-        System.out.print("0");
+        System.out.print("0 ");
       }
       if (num1 == false) {
-        System.out.print("1");
+        System.out.print("1 ");
       }
       if (num2 == false) {
-        System.out.print("2");
+        System.out.print("2 ");
       }
       if (num3 == false) {
-        System.out.print("3");
+        System.out.print("3 ");
       }
       if (num4 == false) {
-        System.out.print("4");
+        System.out.print("4 ");
       }
       if (num5 == false) {
-        System.out.print("5");
+        System.out.print("5 ");
       }
       if (num6 == false) {
-        System.out.print("6");
+        System.out.print("6 ");
       }
       if (num7 == false) {
-        System.out.print("7");
+        System.out.print("7 ");
       }
       if (num8 == false) {
-        System.out.print("8");
+        System.out.print("8 ");
       }
       if (num9 == false) {
-        System.out.print("9");
+        System.out.print("9 ");
       }
 
       System.out.println(""); //SALTO DE LINEA 
