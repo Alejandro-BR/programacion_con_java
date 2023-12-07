@@ -66,92 +66,90 @@ public class T05Ejercico48 {
 
       System.out.print("Dígitos que aparecen en el número: ");
 
-      numeroAuxiliar = numero;
+      numeroAuxiliar = numeroVolteado;
       while (numeroAuxiliar != 0) {
         digito = numeroAuxiliar;
         digito %= 10;
         numeroAuxiliar /= 10;
         if (digito == 0) {
           System.out.print(digito);
+          num0 = true;
         }
         if (digito == 1) {
           System.out.print(digito);
+          num1 = true;
         }
         if (digito == 2) {
           System.out.print(digito);
+          num2 = true;
         }
         if (digito == 3) {
           System.out.print(digito);
+          num3 = true;
         }
         if (digito == 4) {
           System.out.print(digito);
+          num4 = true;
         }
         if (digito == 5) {
           System.out.print(digito);
+          num5 = true;
         }
         if (digito == 6) {
           System.out.print(digito);
+          num6 = true;
         }
         if (digito == 7) {
           System.out.print(digito);
+          num7 = true;
         }
         if (digito == 8) {
           System.out.print(digito);
+          num8 = true;
         }
         if (digito == 9) {
           System.out.print(digito);
+          num9 = true;
         }
       }
 
       System.out.println(""); // SALTO DE LINEA
       System.out.print("Dígitos que no aparecen:  ");
 
-      numeroAuxiliar = numero;
-      while (numeroAuxiliar != 0) {
-        digito = numeroAuxiliar;
-        digito %= 10;
-        numeroAuxiliar /= 10;
-        if ((digito != 0) || (num0 == false)) {
-          System.out.print(digito);
-          num0 = true;
-        }
-        if ((digito != 1) || (num1 == false)) {
-          System.out.print(digito);
-          num1 = true;
-        }
-        if ((digito != 2) || (num2 == false)) {
-          System.out.print(digito);
-          num2 = true;
-        }
-        if ((digito != 3) || (num3 == false)) {
-          System.out.print(digito);
-          num3 = true;
-        }
-        if ((digito != 4) || (num4 == false)) {
-          System.out.print(digito);
-          num4 = true;
-        }
-        if ((digito != 5) || (num5 == false)) {
-          System.out.print(digito);
-          num5 = true;
-        }
-        if ((digito != 6) || (num6 == false)) {
-          System.out.print(digito);
-          num6 = true;
-        }
-        if ((digito != 7) || (num7 == false)) {
-          System.out.print(digito);
-          num7 = true;
-        }
-        if ((digito != 8) || (num8 == false)) {
-          System.out.print(digito);
-          num8 = true;
-        }
-        if ((digito != 9) || (num9 == false)) {
-          System.out.print(digito);
-          num9 = true;
-        }
+      if (num0 == false) {
+        System.out.print("0");
       }
+      if (num1 == false) {
+        System.out.print("1");
+      }
+      if (num2 == false) {
+        System.out.print("2");
+      }
+      if (num3 == false) {
+        System.out.print("3");
+      }
+      if (num4 == false) {
+        System.out.print("4");
+      }
+      if (num5 == false) {
+        System.out.print("5");
+      }
+      if (num6 == false) {
+        System.out.print("6");
+      }
+      if (num7 == false) {
+        System.out.print("7");
+      }
+      if (num8 == false) {
+        System.out.print("8");
+      }
+      if (num9 == false) {
+        System.out.print("9");
+      }
+
+      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); //SALTO DE LINEA 
+
     } catch (Exception e) {
       System.out.println(""); // SALTO DE LINEA
       System.out.println("Mensaje de error: " + e.getMessage());
@@ -160,4 +158,3 @@ public class T05Ejercico48 {
     }
   }
 }
-
