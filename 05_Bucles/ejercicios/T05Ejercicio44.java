@@ -13,6 +13,8 @@
  * Introduzca el dígito que quiere insertar: 5
  * El número resultante es 4056783.
  * 
+ * Sin terminar 
+ * 
  * @author Alejandro Barrionuevo Rosado
  */
 import java.util.Scanner; 

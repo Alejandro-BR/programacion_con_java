@@ -14,7 +14,7 @@
  * Los números partidos son el 4067 y el 83.
  * 
  * 
- * //No me sale es imposible
+ * No terminado
  * 
  * @author Alejandro Barrionuevo Rosado
  */

@@ -63,8 +63,6 @@ public class T05Ejercicio48 {
         copiaNumero /= 10;
       }
 
-      System.out.print("Dígitos que aparecen en el número: ");
-
       numeroAuxiliar = numeroVolteado;
       while (numeroAuxiliar != 0) {
         digito = numeroAuxiliar;
@@ -102,6 +100,8 @@ public class T05Ejercicio48 {
         }
       }
 
+      System.out.print("Dígitos que aparecen en el número: ");
+      
       if (num0 == true) {
         System.out.print("0 ");
       }
