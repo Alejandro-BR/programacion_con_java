@@ -15,7 +15,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 import java.util.Scanner; 
-public class T05Ejercico42 {
+public class T05Ejercicio42 {
   public static void main(String[] args) {
     try {
       boolean primo = true;

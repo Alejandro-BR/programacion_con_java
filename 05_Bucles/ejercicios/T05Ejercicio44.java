@@ -16,7 +16,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 import java.util.Scanner; 
-public class T05Ejercico44 {
+public class T05Ejercicio44 {
   public static void main(String[] args) {
     try {
       long numeroVolteado = 0;

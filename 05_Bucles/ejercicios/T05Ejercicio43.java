@@ -19,7 +19,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 import java.util.Scanner; 
-public class T05Ejercico43 {
+public class T05Ejercicio43 {
   public static void main(String[] args) {
     try {
       int digito;

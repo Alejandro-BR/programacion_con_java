@@ -31,7 +31,7 @@
  */
 import java.util.Scanner;
 
-public class T05Ejercico48 {
+public class T05Ejercicio48 {
   public static void main(String[] args) {
     try {
       long numeroAuxiliar;
