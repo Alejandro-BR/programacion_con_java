@@ -13,71 +13,74 @@
  * Introduzca el dígito que quiere insertar: 5
  * El número resultante es 4056783.
  * 
- * Sin terminar 
+ * Codigo sacado de David
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-import java.util.Scanner; 
+import java.util.Scanner;
+
 public class T05Ejercicio44 {
   public static void main(String[] args) {
     try {
+
+      long numIntroducido;
+      long copiaNumIntroducido;
       long numeroVolteado = 0;
-      int numeroDigitos = 0;
+      long ultimoDigito;
+      int digitoAIntroducir;
+      int posicionDigito;
       int contador = 0;
 
-      Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
+      Scanner sc = new Scanner(System.in); // Creamos un objetos de la clase Scanner, llamado sc
 
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
 
       System.out.print("Por favor, introduzca un número entero positivo: ");
-      long numero = sc.nextLong();
+      numIntroducido = sc.nextLong();
+      copiaNumIntroducido = numIntroducido;
 
       System.out.print("Introduzca la posición donde quiere insertar: ");
-      int posicion = sc.nextInt();
+      posicionDigito = sc.nextInt();
 
       System.out.print("Introduzca el dígito que quiere insertar: ");
-      int digitoInsertado = sc.nextInt();
+      digitoAIntroducir = sc.nextInt();
 
-      sc.close(); //Cierre del Scanner 
+      sc.close(); // Cierre del Scanner
 
-      // Voltear el numero y sacar los digitos hasta el indicado
-      long copiaNumero = numero;
+      System.out.print("El número resultante es: ");
 
-      while (numeroDigitos <= posicion) {
-        numeroVolteado = ((numeroVolteado * 10) + (copiaNumero % 10));
-        copiaNumero /= 10;
-        numeroDigitos++;
-      }
 
-      // System.out.println(copiaNumero); //AYUDA
+      while (copiaNumIntroducido > 0) {
 
-      // La segunda parte del numero
-      long numeroAuxiliar = numero;
-      long numeroUltimaParte = copiaNumero;
-
-      while (numeroAuxiliar != 0) {
-        numeroAuxiliar /= 10;
+        ultimoDigito = copiaNumIntroducido % 10;
+        numeroVolteado = numeroVolteado * 10 + ultimoDigito;
         contador++;
+
+        copiaNumIntroducido /= 10;
       }
 
-      // System.out.println(contador); //AYUDA
+      for (int i = 0; i < posicionDigito - 1; i++) {
+        ultimoDigito = numeroVolteado % 10;
+        numeroVolteado /= 10;
 
-      for (int i = 0; i < (contador - numeroDigitos - 1); i++) {
-        numeroUltimaParte *= 10;
+        System.out.print(ultimoDigito);
       }
 
-      long resta = numero - numeroUltimaParte;
-      System.out.println(resta); //AYUDA
+      System.out.print(digitoAIntroducir);
 
-      System.out.print("El número resultante es " + copiaNumero);
-      System.out.print(digitoInsertado);
-      System.out.print(resta + ".");
+      for (int i = 0; i < (contador - posicionDigito) + 1; i++) {
+        ultimoDigito = numeroVolteado % 10;
+        numeroVolteado /= 10;
+        System.out.print(ultimoDigito);
+      }
+
+      System.out.println(""); //SALTO DE LINEA 
 
     } catch (Exception e) {
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
       System.out.println("Mensaje de error: " + e.getMessage());
       System.out.println("Clase de la excepcion: " + e.getClass());
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
     }
   }
 }
