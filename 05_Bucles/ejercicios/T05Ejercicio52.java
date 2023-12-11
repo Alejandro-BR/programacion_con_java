@@ -1,4 +1,3 @@
-
 /**
  * Ejercicio 52: Realiza un programa que sea capaz de desplazar todos los dígitos de un número
  * de derecha a izquierda una posición. El dígito de más a la izquierda, pasaría a
@@ -57,6 +56,7 @@ public class T05Ejercicio52 {
         contador++;
       }
 
+      //Contador para saber todos los digitos para asi descifrar el primer digito
       numeroAuxiliar = numeroVolteado;
       for (int i = 0; i < contador; i++) {
         digito = numeroAuxiliar;
@@ -68,6 +68,7 @@ public class T05Ejercicio52 {
 
       System.out.print("El número resultado es ");
 
+      //Dibujar los digitos 
       numeroAuxiliar = numeroVolteado;
       for (int i = 0; i < contador; i++) {
         digito = numeroAuxiliar;
