@@ -1,10 +1,10 @@
 package matematicas;
+
 /**
  * Funcion para calcula el volumen de un cilindro
  * 
  * @author Alejandro Barrionuevo Rosado
- * 
- * Este codigo es obtenido de Sergio Sánchez.
+ *
  **/
 public class Volumen {
   

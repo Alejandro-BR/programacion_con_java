@@ -5,7 +5,6 @@ package matematicas;
  * 
  * @author Alejandro Barrionuevo Rosado
  * 
- * Este codigo es obtenido de Sergio Sánchez.
  */
 public class Varias {
 
@@ -17,6 +16,7 @@ public class Varias {
    * @param x un número entero positivo
    * @return boolean <code>true</code> si el número es primo o <code>false</code> en caso contrario
    */
+
   public static boolean esPrimo(int x) {
     
     for (int i = 2; i < x; i++) {
@@ -34,6 +34,7 @@ public class Varias {
    * @param x un número entero
    * @return int la cantidad de dígitos que contiene el número
    */
+
   public static int digitos(int x) {
     
     if (x == 0) {
@@ -46,5 +47,71 @@ public class Varias {
       }
       return n;
     }
+  }
+
+  /** 
+   * Voltear un numero introducido por teclado
+   * @param x un numero de tipo long
+   * @return long el numero volteado
+   */
+
+  public static long voltea(long x){
+    if (x < 0) {
+      return -voltea(-x);
+    }
+    long numeroVolteado = 0;
+    while (x > 0) {
+      numeroVolteado = (numeroVolteado * 10) + (x % 10);
+      x /= 10; 
+    }
+    return numeroVolteado;
+  }
+
+  /** 
+   *  Voltear un numero introducido por teclado, llamado a la funcion original que devuelve un long
+   * @param x un numero entero
+   * @return int casteando el resultado de llamar a la funcion long voltea()
+   */
+
+  public static int voltea(int x){
+    return (int) voltea((long) x);
+  }
+
+  /** 
+   * Saber si un numero long es capicuo
+   * @param x
+   * @return boolean
+   */
+
+  public static boolean esCapicua(long x){
+    // boolean resultado = false;
+    // if (x == voltea(x)) {
+    //   resultado = true;
+    // }
+    // return resultado;
+    return x == voltea(x);
+  }
+
+    /** 
+   * Saber si un numero long es capicuo
+   * @param x
+   * @return boolean
+   */
+
+  public static boolean esCapicua(int x){
+    return esCapicua((long) x);
+  }
+
+  /** 
+   * Nos da el siguiente primo despues del numero introducido
+   * @param x
+   * @return int
+   */
+
+  public static int siguientePrimo(int x){
+    do {
+      x++;
+    } while (!esPrimo(x));
+    return x;
   }
 }
