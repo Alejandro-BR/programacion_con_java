@@ -114,4 +114,37 @@ public class Varias {
     } while (!esPrimo(x));
     return x;
   }
+
+  /** 
+   * Suma de divisores propios
+   * @param x
+   * @return int
+   */
+
+  public static int sumaDivisoresPropios (int x){
+    int suma = 0;
+    for (int i = 1; i < x; i++) {
+      if (x % i == 0) {
+        suma += i;
+      }
+    }
+    return suma;
+  }
+
+  
+  /** 
+   * Numeros amigos
+   * @param x primer numero
+   * @param y segundo numero
+   * @return boolean
+   */
+
+  public static boolean numerosAmigos (int x, int y){
+    if (x == sumaDivisoresPropios(y) && y == sumaDivisoresPropios(x)) {
+      return true;
+    }
+    return false;
+  }
 }
+
+
