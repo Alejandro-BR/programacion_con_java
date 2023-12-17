@@ -93,7 +93,7 @@ public class Varias {
   }
 
     /** 
-   * Saber si un numero long es capicuo
+   * Saber si un numero int es capicuo
    * @param x
    * @return boolean
    */
