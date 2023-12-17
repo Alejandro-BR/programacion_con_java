@@ -34,11 +34,17 @@ public class T08Ejercicios1_14 {
       // int digito = sc.nextInt();
       // System.out.println("El digito que buscas esta en la posicon " + numeros.posicionDeDigito(numero, digito));
 
+      // System.out.print("Introduce el numero: ");
+      // long numero = sc.nextLong();
+      // System.out.print("Digitos que quieres quitar: ");
+      // int digito = sc.nextInt();
+      // System.out.println("El numero que queda: " + numeros.quitaPorDetras(numero, digito));
+
       System.out.print("Introduce el numero: ");
-      long numero = sc.nextLong();
+      long numero2 = sc.nextLong();
       System.out.print("Digitos que quieres quitar: ");
-      int digito = sc.nextInt();
-      System.out.println("El numero que queda: " + numeros.quitaPorDetras(numero, digito));
+      int digito2 = sc.nextInt();
+      System.out.println("El numero que queda: " + numeros.quitaPorDelante(numero2, digito2));
 
       sc.close(); // Cierre del Scanner
     } catch (Exception e) {

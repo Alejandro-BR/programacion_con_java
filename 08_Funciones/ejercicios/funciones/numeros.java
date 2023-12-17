@@ -225,7 +225,7 @@ public class numeros {
     return posicionDeDigito((long) x, y);
   }
 
-  /** 
+  /**
    * Le quita a un número n dígitos por detrás (por la derecha).
    * 
    * @param x long numero
@@ -238,15 +238,15 @@ public class numeros {
     // long d = 0;
     // long n = 0;
     // for (int i = 1; i <= digitos(x) - y; i++) {
-    //   d = x % 10;
-    //   x /= 10;
-    //   n = (n * 10) + d;
+    // d = x % 10;
+    // x /= 10;
+    // n = (n * 10) + d;
     // }
     // return n;
-    return x / (long)potencia(10, y);
+    return x / (long) potencia(10, y);
   }
 
-  /** 
+  /**
    * Le quita a un número n dígitos por detrás (por la derecha).
    * 
    * @param x int numero
@@ -254,7 +254,33 @@ public class numeros {
    * @return int
    */
 
-  public static int quitaPorDetras(int x, int y){
-    return (int)quitaPorDetras((long) x, y);
+  public static int quitaPorDetras(int x, int y) {
+    return (int) quitaPorDetras((long) x, y);
   }
+
+  /** 
+   * Le quita a un número n dígitos por delante (por la izquierda).
+   * 
+   * @param x long numero
+   * @param y int digitos que se quitan delante
+   * @return long
+   */
+
+  public static long quitaPorDelante(long x, int y){
+    x = voltea(x);
+    x = x / (long) potencia(10, y);
+    return voltea(x);
+  }
+
+    /** 
+   * Le quita a un número n dígitos por delante (por la izquierda).
+   * 
+   * @param x int numero
+   * @param y int digitos que se quitan delante
+   * @return int
+   */
+  public static int quitaPorDelante(int x, int y){
+    return (int) quitaPorDelante((long) x, y);
+  }
+  
 }
