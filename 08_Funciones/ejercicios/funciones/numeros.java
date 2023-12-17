@@ -225,4 +225,36 @@ public class numeros {
     return posicionDeDigito((long) x, y);
   }
 
+  /** 
+   * Le quita a un número n dígitos por detrás (por la derecha).
+   * 
+   * @param x long numero
+   * @param y int digitos que se quitan detras
+   * @return long
+   */
+
+  public static long quitaPorDetras(long x, int y) {
+    // x = voltea(x);
+    // long d = 0;
+    // long n = 0;
+    // for (int i = 1; i <= digitos(x) - y; i++) {
+    //   d = x % 10;
+    //   x /= 10;
+    //   n = (n * 10) + d;
+    // }
+    // return n;
+    return x / (long)potencia(10, y);
+  }
+
+  /** 
+   * Le quita a un número n dígitos por detrás (por la derecha).
+   * 
+   * @param x int numero
+   * @param y int digitos que se quitan detras
+   * @return int
+   */
+
+  public static int quitaPorDetras(int x, int y){
+    return (int)quitaPorDetras((long) x, y);
+  }
 }
