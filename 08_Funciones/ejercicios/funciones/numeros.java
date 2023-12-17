@@ -1,3 +1,22 @@
+/**
+ * esCapicua
+ * esPrimo
+ * siguientePrimo
+ * potencia
+ * digitos
+ * voltea
+ * digitoN
+ * posicionDeDigito
+ * quitaPorDetras
+ * quitaPorDelante
+ * pegaPorDetras
+ * pegaPorDelante
+ * trozoDeNumero
+ * juntaNumeros
+ * 
+ * @author Alejandro Barrionuevo Rosado
+ */
+
 package funciones;
 
 public class numeros {
@@ -101,8 +120,13 @@ public class numeros {
    * @return double
    */
   public static double potencia(double x, double y) {
-    double potencia = Math.pow(x, y);
-    return potencia;
+    if (x == 0) {
+      return 1;
+    } else {
+      double potencia = Math.pow(x, y);
+      return potencia;
+    }
+
   }
 
   /**
@@ -145,7 +169,60 @@ public class numeros {
     }
   }
 
+  /**
+   * Devuelve el dígito que está en la posición n de un número entero.
+   * Se empieza contando por el 0 y de izquierda a derecha.
+   * 
+   * @param x int numero introducido
+   * @param y int posicion del digito que quieres
+   * @return int
+   */
+
+  public static int digitoN(int x, int y) {
+    int numeroVolteado = voltea(x);
+    int digito = 0;
+    for (int i = 1; i <= y; i++) {
+      digito = numeroVolteado % 10;
+      numeroVolteado /= 10;
+    }
+    return digito;
+  }
+
+  /**
+   * Da la posición de la primera ocurrencia de un dígito dentro de un número
+   * entero.
+   * Si no se encuentra, devuelve -1.
+   * 
+   * @param x long numero
+   * @param y int digito que se busca
+   * @return int
+   */
+
+  public static int posicionDeDigito(long x, int y) {
+    long d = 0;
+    x = voltea(x);
+    int j = -1; // copia de i
+    for (int i = 1; i <= digitos(x); i++) {
+      d = x % 10;
+      x /= 10;
+      if (d == y) {
+        j = i;
+      }
+    }
+    return j;
+  }
+
+  /**
+   * Da la posición de la primera ocurrencia de un dígito dentro de un número
+   * entero.
+   * Si no se encuentra, devuelve -1.
+   * 
+   * @param x int numero
+   * @param y int digito que se busca
+   * @return int
+   */
+  public static int posicionDeDigito(int x, int y) {
+    return posicionDeDigito((long) x, y);
+  }
+
 }
-
-
-

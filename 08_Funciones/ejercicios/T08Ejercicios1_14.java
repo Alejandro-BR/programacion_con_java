@@ -1,4 +1,3 @@
-
 /**
  * Crea una biblioteca de funciones matemáticas que contenga las siguientes
  * funciones. Recuerda que puedes usar unas dentro de otras si es necesario.
@@ -19,9 +18,22 @@ public class T08Ejercicios1_14 {
   public static void main(String[] args) {
     try {
       Scanner sc = new Scanner(System.in); // Creamos un objetos de la clase Scanner, llamado sc
+      // System.out.print("Introduce el numero: ");
+      // long numero = sc.nextLong();
+      // System.out.println("Numero de digitos: " + numeros.digitos(numero));
+
+      // System.out.print("Introduce el numero: ");
+      // int numero = sc.nextInt();
+      // System.out.print("Introduce la posicion: ");
+      // int posicion = sc.nextInt();
+      // System.out.println("Numero de digitos: " + numeros.digitoN(numero, posicion));
+
       System.out.print("Introduce el numero: ");
-      long numero = sc.nextLong();
-      System.out.println("Numero de digitos: " + numeros.digitos(numero));
+      int numero = sc.nextInt();
+      System.out.print("Digito que buscas: ");
+      int digito = sc.nextInt();
+      System.out.println("El digito que buscas esta en la posicon " + numeros.posicionDeDigito(numero, digito));
+
       sc.close(); // Cierre del Scanner
     } catch (Exception e) {
       System.out.println(""); //SALTO DE LINEA 
