@@ -282,5 +282,64 @@ public class numeros {
   public static int quitaPorDelante(int x, int y){
     return (int) quitaPorDelante((long) x, y);
   }
-  
+
+  /** 
+   * Añade un dígito a un número por detrás.
+   * 
+   * @param x long numero inicial
+   * @param y int digito introducido
+   * @return long
+   */
+
+  public static long pegaPorDetras(long x, int y){
+    long numero = x * 10;
+    numero += y;
+    return numero;
+  }
+
+  /** 
+   * Añade un dígito a un número por detrás.
+   * 
+   * @param x int numero inicial
+   * @param y int digito introducido
+   * @return int
+   */
+
+  public static int pegaPorDetras(int x, int y){
+    int numero = x * 10;
+    numero += y;
+    return numero;
+  }
+
+  /** 
+   * Añade un dígito a un número por delante.
+   * 
+   * @param x long numero inicial
+   * @param y int digito introducido
+   * @return long
+   */
+
+  public static long pegaPorDelante(long x, int y){
+    int digitos = digitos(x);
+    for (int i = 0; i < digitos; i++) {
+      y *= 10;
+    }
+    return (y + x);
+  }
+
+  /** 
+   * Añade un dígito a un número por delante.
+   * 
+   * @param x int numero inicial
+   * @param y int digito introducido
+   * @return int
+   */
+
+  public static int pegaPorDelante(int x, int y){
+    int digitos = digitos(x);
+    for (int i = 0; i < digitos; i++) {
+      y *= 10;
+    }
+    return (y + x);
+  }
 }

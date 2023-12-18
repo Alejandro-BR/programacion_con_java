@@ -40,11 +40,23 @@ public class T08Ejercicios1_14 {
       // int digito = sc.nextInt();
       // System.out.println("El numero que queda: " + numeros.quitaPorDetras(numero, digito));
 
-      System.out.print("Introduce el numero: ");
-      long numero2 = sc.nextLong();
-      System.out.print("Digitos que quieres quitar: ");
-      int digito2 = sc.nextInt();
-      System.out.println("El numero que queda: " + numeros.quitaPorDelante(numero2, digito2));
+      // System.out.print("Introduce el numero: ");
+      // long numero2 = sc.nextLong();
+      // System.out.print("Digitos que quieres quitar: ");
+      // int digito2 = sc.nextInt();
+      // System.out.println("El numero que queda: " + numeros.quitaPorDelante(numero2, digito2));
+
+      // System.out.print("Introduce el numero: ");
+      // long numero = sc.nextLong();
+      // System.out.print("Introduce el digito: ");
+      // int digito = sc.nextInt();
+      // System.out.println("El numero que queda: " + numeros.pegaPorDetras(numero, digito));
+
+      // System.out.print("Introduce el numero: ");
+      // long numero = sc.nextLong();
+      // System.out.print("Introduce el digito: ");
+      // int digito = sc.nextInt();
+      // System.out.println("El numero que queda: " + numeros.pegaPorDelante(numero, digito));
 
       sc.close(); // Cierre del Scanner
     } catch (Exception e) {
