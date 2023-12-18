@@ -258,7 +258,7 @@ public class numeros {
     return (int) quitaPorDetras((long) x, y);
   }
 
-  /** 
+  /**
    * Le quita a un número n dígitos por delante (por la izquierda).
    * 
    * @param x long numero
@@ -266,24 +266,24 @@ public class numeros {
    * @return long
    */
 
-  public static long quitaPorDelante(long x, int y){
+  public static long quitaPorDelante(long x, int y) {
     x = voltea(x);
     x = x / (long) potencia(10, y);
     return voltea(x);
   }
 
-    /** 
+  /**
    * Le quita a un número n dígitos por delante (por la izquierda).
    * 
    * @param x int numero
    * @param y int digitos que se quitan delante
    * @return int
    */
-  public static int quitaPorDelante(int x, int y){
+  public static int quitaPorDelante(int x, int y) {
     return (int) quitaPorDelante((long) x, y);
   }
 
-  /** 
+  /**
    * Añade un dígito a un número por detrás.
    * 
    * @param x long numero inicial
@@ -291,13 +291,13 @@ public class numeros {
    * @return long
    */
 
-  public static long pegaPorDetras(long x, int y){
+  public static long pegaPorDetras(long x, int y) {
     long numero = x * 10;
     numero += y;
     return numero;
   }
 
-  /** 
+  /**
    * Añade un dígito a un número por detrás.
    * 
    * @param x int numero inicial
@@ -305,13 +305,13 @@ public class numeros {
    * @return int
    */
 
-  public static int pegaPorDetras(int x, int y){
+  public static int pegaPorDetras(int x, int y) {
     int numero = x * 10;
     numero += y;
     return numero;
   }
 
-  /** 
+  /**
    * Añade un dígito a un número por delante.
    * 
    * @param x long numero inicial
@@ -319,7 +319,23 @@ public class numeros {
    * @return long
    */
 
-  public static long pegaPorDelante(long x, int y){
+  public static long pegaPorDelante(long x, int y) {
+    int digitos = digitos(x);
+    for (int i = 0; i < digitos; i++) {
+      y *= 10;
+    }
+    return (y + x);
+  }
+
+  /**
+   * Añade un dígito a un número por delante.
+   * 
+   * @param x int numero inicial
+   * @param y int digito introducido
+   * @return int
+   */
+
+  public static int pegaPorDelante(int x, int y) {
     int digitos = digitos(x);
     for (int i = 0; i < digitos; i++) {
       y *= 10;
@@ -328,18 +344,27 @@ public class numeros {
   }
 
   /** 
-   * Añade un dígito a un número por delante.
+   * Toma como parámetros las posiciones inicial y finaldentro de un número y devuelve el trozo correspondiente.
    * 
-   * @param x int numero inicial
-   * @param y int digito introducido
-   * @return int
+   * sin terminar
+   * 
+   * @param x long numero original
+   * @param y int Modo: (1 PARA LA PRIMERA PARTE) (2 PARA LA PARTE FINAL)
+   * @return long
    */
 
-  public static int pegaPorDelante(int x, int y){
-    int digitos = digitos(x);
-    for (int i = 0; i < digitos; i++) {
-      y *= 10;
+  public static long trozoDeNumero(long x, int y) {
+    long numero = x;
+    long resultado = 0;
+    if (y == 1){
+      numero = voltea(x);
     }
-    return (y + x);
+    for (int i = 1; i <= digitos(x)/2 ; i++) {
+      resultado = (numero % 10) * 10;
+      numero /= 10;
+    }
+
+    return resultado;
   }
+
 }
