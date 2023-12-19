@@ -58,12 +58,20 @@ public class T08Ejercicios1_14 {
       // int digito = sc.nextInt();
       // System.out.println("El numero que queda: " + numeros.pegaPorDelante(numero, digito));
 
-      System.out.print("Introduce el numero: ");
-      long numero = sc.nextLong();
-      System.out.print("1 PRIMERO / 2 FINAL: ");
-      int modo = sc.nextInt();
-      System.out.println("Numero: " + numeros.trozoDeNumero(numero, modo));
+      //NO ES COMO LO ESTABA HACIENDO
+      // System.out.print("Introduce el numero: ");
+      // long numero = sc.nextLong();
+      // System.out.print("1 PRIMERO / 2 FINAL: ");
+      // int modo = sc.nextInt();
+      // System.out.println("Numero: " + numeros.trozoDeNumero(numero, modo));
 
+      System.out.print("Introduce el primer numero: ");
+      // long numero1 = sc.nextLong();
+      int numero1 = sc.nextInt();
+      System.out.print("Introduce el segundo numero: ");
+      // long numero2 = sc.nextLong();
+      int numero2 = sc.nextInt();
+      System.out.println("Numero combinado: " + numeros.juntaNumeros(numero1,numero2));
 
       sc.close(); // Cierre del Scanner
     } catch (Exception e) {

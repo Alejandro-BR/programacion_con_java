@@ -1,4 +1,7 @@
 /**
+ * 
+ * Propuestas por los ejercicios
+ * -------------------------------
  * esCapicua
  * esPrimo
  * siguientePrimo
@@ -13,6 +16,9 @@
  * pegaPorDelante
  * trozoDeNumero
  * juntaNumeros
+ * 
+ * Extras
+ * -------------------------------
  * 
  * @author Alejandro Barrionuevo Rosado
  */
@@ -343,10 +349,11 @@ public class numeros {
     return (y + x);
   }
 
-  /** 
-   * Toma como parámetros las posiciones inicial y finaldentro de un número y devuelve el trozo correspondiente.
+  /**
+   * Toma como parámetros las posiciones inicial y finaldentro de un número y
+   * devuelve el trozo correspondiente.
    * 
-   * sin terminar
+   * sin terminar y mal
    * 
    * @param x long numero original
    * @param y int Modo: (1 PARA LA PRIMERA PARTE) (2 PARA LA PARTE FINAL)
@@ -356,15 +363,44 @@ public class numeros {
   public static long trozoDeNumero(long x, int y) {
     long numero = x;
     long resultado = 0;
-    if (y == 1){
+    if (y == 1) {
       numero = voltea(x);
     }
-    for (int i = 1; i <= digitos(x)/2 ; i++) {
+    for (int i = 1; i <= digitos(x) / 2; i++) {
       resultado = (numero % 10) * 10;
       numero /= 10;
     }
-
     return resultado;
+  }
+
+  /** 
+   * Pega dos números para formar uno.
+   * 
+   * @param x long primer numero
+   * @param y long segundo numero
+   * @return long
+   */
+
+  public static long juntaNumeros(long x, long y){
+    for (int i = 0; i < digitos(y); i++) {
+      x *= 10;
+    }
+    return x + y;
+  }
+
+    /** 
+   * Pega dos números para formar uno.
+   * 
+   * @param x int primer numero
+   * @param y int segundo numero
+   * @return int
+   */
+
+  public static int juntaNumeros(int x, int y){
+    for (int i = 0; i < digitos(y); i++) {
+      x *= 10;
+    }
+    return x + y;
   }
 
 }
