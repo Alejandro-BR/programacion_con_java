@@ -21,6 +21,7 @@
  * -------------------------------
  * sumaDivisoresPropios   --> ejemplos/matematica/Varios
  * factorial
+ * divisores
  * 
  * @author Alejandro Barrionuevo Rosado
  */
@@ -423,7 +424,7 @@ public class numeros {
   }
 
   /** 
-   * Sacar el factorial de un numero 
+   * Sacar el factorial de un numero. 
    * 
    * Ejemplo 6! = 720
    * 
@@ -437,6 +438,22 @@ public class numeros {
       f *= i;
     }  
     return f;
+  }
+
+  /** 
+   * Divisores de un numero.
+   * 
+   * @param x int 
+   */
+
+  public static void divisores(int x){
+    int d = 0;
+    for (int i = 1; i <= x; i++) {
+      d = x % i;
+      if (d == 0) {
+        System.out.print(i + " ");
+      }
+    }
   }
 
 }

@@ -15,8 +15,10 @@ public class T08FuncionesExtras {
     Scanner sc = new Scanner(System.in);  //Creamos un objetos de la clase Scanner, llamado sc 
     System.out.print("Introduce el numero: ");
     numeroI1 = sc.nextInt();
-    System.out.println("Resultado: " + numeros.factorial(numeroI1));
-
+    // System.out.println("Resultado: " + numeros.factorial(numeroI1)); //Factorial
+    System.out.print("Divisores de " + numeroI1 + ": ");
+    numeros.divisores(numeroI1);
+    
     sc.close(); //Cierre del Scanner 
 
   }
