@@ -22,6 +22,7 @@
  * sumaDivisoresPropios   --> ejemplos/matematica/Varios
  * factorial
  * divisores
+ * paresImpares
  * 
  * @author Alejandro Barrionuevo Rosado
  */
@@ -423,30 +424,31 @@ public class numeros {
     return suma;
   }
 
-  /** 
-   * Sacar el factorial de un numero. 
+  /**
+   * Sacar el factorial de un numero.
    * 
    * Ejemplo 6! = 720
    * 
-   * @param x int 
+   * @param x int
    * @return int
    */
 
   public static int factorial(int x) {
     int f = 1;
-    for (int i = 1; i <= x; i ++){
+    for (int i = 1; i <= x; i++) {
       f *= i;
-    }  
+    }
     return f;
   }
 
-  /** 
+  /**
    * Divisores de un numero.
+   * (void)
    * 
-   * @param x int 
+   * @param x int
    */
 
-  public static void divisores(int x){
+  public static void divisores(int x) {
     int d = 0;
     for (int i = 1; i <= x; i++) {
       d = x % i;
@@ -454,6 +456,31 @@ public class numeros {
         System.out.print(i + " ");
       }
     }
+  }
+
+  /** 
+   * De un numero long te dice cuantos digitos impares y pares tiene.
+   * (void)
+   * 
+   * @param x long
+   */
+
+  public static void paresImpares(long x) {
+    int pares = 0;
+    int impares = 0;
+    long d;
+    long copia = x;
+    while (x > 0) {
+      d = (int) (x % 10);
+      if ((d % 2 == 0) && (d != 0)) {
+        pares++;
+      } else if ((d % 2 != 0) && (d != 0)) {
+        impares++;
+      }
+      x /= 10;
+    }
+
+    System.out.println("El " + copia + " contiene " + pares + " dígitos pares y " + impares + " dígitos impares.");
   }
 
 }
