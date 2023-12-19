@@ -19,6 +19,8 @@
  * 
  * Extras
  * -------------------------------
+ * sumaDivisoresPropios   --> ejemplos/matematica/Varios
+ * factorial
  * 
  * @author Alejandro Barrionuevo Rosado
  */
@@ -373,7 +375,7 @@ public class numeros {
     return resultado;
   }
 
-  /** 
+  /**
    * Pega dos números para formar uno.
    * 
    * @param x long primer numero
@@ -381,14 +383,14 @@ public class numeros {
    * @return long
    */
 
-  public static long juntaNumeros(long x, long y){
+  public static long juntaNumeros(long x, long y) {
     for (int i = 0; i < digitos(y); i++) {
       x *= 10;
     }
     return x + y;
   }
 
-    /** 
+  /**
    * Pega dos números para formar uno.
    * 
    * @param x int primer numero
@@ -396,11 +398,45 @@ public class numeros {
    * @return int
    */
 
-  public static int juntaNumeros(int x, int y){
+  public static int juntaNumeros(int x, int y) {
     for (int i = 0; i < digitos(y); i++) {
       x *= 10;
     }
     return x + y;
+  }
+
+  /**
+   * Suma de divisores propios
+   * 
+   * @param x int
+   * @return int
+   */
+
+  public static int sumaDivisoresPropios(int x) {
+    int suma = 0;
+    for (int i = 1; i < x; i++) {
+      if (x % i == 0) {
+        suma += i;
+      }
+    }
+    return suma;
+  }
+
+  /** 
+   * Sacar el factorial de un numero 
+   * 
+   * Ejemplo 6! = 720
+   * 
+   * @param x int 
+   * @return int
+   */
+
+  public static int factorial(int x) {
+    int f = 1;
+    for (int i = 1; i <= x; i ++){
+      f *= i;
+    }  
+    return f;
   }
 
 }
