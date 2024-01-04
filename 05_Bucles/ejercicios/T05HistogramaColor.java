@@ -8,7 +8,7 @@ public class T05HistogramaColor {
       int digitoMayor = 0;
       int numeroDigitos = 0;
 
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
       System.out.println("Introduzca numeros entre 0 y 9 y pulsa INTRO. Introduce un numero negativo si desea parar.");
 
       do {
@@ -29,7 +29,7 @@ public class T05HistogramaColor {
         numeroDigitos++;
       }
 
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
 
       // Empezamos a mostrarlo en forma de tabla, teniendo en cuenta que hay que pinta
       // digitoMayor +1 columnas y numeroDigitos filasç
@@ -37,37 +37,51 @@ public class T05HistogramaColor {
       int numeroFilas = numeroDigitos;
 
       // Pintamos la primera hilera de guiones
+      System.out.print("\u2554");
       for (int i = 1; i <= numeroColumnas; i++) {
-        System.out.print(" ---");
+        System.out.print("\u2550\u2550\u2550");
+        if (i < numeroColumnas) {
+          System.out.print("\u2566");
+        }
       }
+      System.out.println("\u2557");
 
       // Empezamos a pintar las filas
       for (int i = 1; i <= numeroFilas; i++) {
         digito = (int) (numeroVolteado % 10); // Cojo el digito menos significativo del numeroVolteamos
 
-        System.out.println(); // SALTO DE LINEA
-        System.out.print("| " + digito + " |"); // Pintamos la 1ª columna, la de los digitos introducidos
+        System.out.print("\u2551 " + digito + " \u2551"); // Pintamos la 1ª columna, la de los digitos introducidos
 
         // Pintamos tantas columnsas con asteriscos como indique el digito
         for (int j = 1; j <= digito; j++) {
-          System.out.print(" * |");
+          System.out.print(" * \u2551");
         }
 
         // Pintamos el resto de columnas sin asterisco
         for (int j = 1; j < numeroColumnas - digito; j++) {
-          System.out.print("   |");
+          System.out.print("   \u2551");
         }
         System.out.println(); // SALTO DE LINEA
-
+        if (i < numeroColumnas ) {
+          System.out.print("\u2551");
+        } else {
+          System.out.print("\u255A");
+        }
         for (int j = 1; j <= numeroColumnas; j++) {
-          System.out.print(" ---");
+          System.out.print("\u2550\u2550\u2550");
+          if (j < numeroColumnas) {
+            System.out.print("\u2569");
+          }
+          else {
+            System.err.println("\u255D");
+          }
         }
 
         numeroVolteado /= 10;
       }
 
-      System.out.println(""); //SALTO DE LINEA 
-      System.out.println(""); //SALTO DE LINEA 
+      System.out.println(""); // SALTO DE LINEA
+      System.out.println(""); // SALTO DE LINEA
 
     } catch (Exception e) {
       System.out.println("Mensaje de error: " + e.getMessage()); // e.getMessage()
