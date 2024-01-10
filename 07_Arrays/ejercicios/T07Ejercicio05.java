@@ -25,16 +25,22 @@ public class T07Ejercicio05 {
       }
     }
 
-    for (int i = 0; i < numero.length; i++) {
-      System.out.println(numero[i]);
-      if (numero[i] == maximo) {
-        System.out.print(" maximo");
-      }
-      if (numero[i] == minimo) {
-        System.out.print(" minimo");
-      }
-      System.out.println(""); //SALTO DE LINEA 
-    }
+    System.out.println(); //SALTO DE LINEA 
+    System.out.println("El numero maximo es " + maximo);
+    System.out.println("El numero minimo es " + minimo);
+    System.out.println(); //SALTO DE LINEA 
+
+    // for (int i = 0; i < numero.length; i++) {
+    //   if (numero[i] == maximo) {
+    //     System.out.print(numero[i]);
+    //     System.out.println(" maximo");
+    //   }
+    //   if (numero[i] == minimo) {
+    //     System.out.print(numero[i]);
+    //     System.out.println(" minimo");
+    //   }
+    //   System.out.println(""); //SALTO DE LINEA 
+    // }
 
   }
 }
