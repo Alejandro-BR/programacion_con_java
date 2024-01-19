@@ -17,17 +17,37 @@ public class T07Ejercicio10 {
     try {
       int numero[] = new int[20];
       int impar[] = new int[20];
+      int par[] = new int[20];
+      int aux;
 
       //Crear la array
       for (int i = 0; i < numero.length; i++) {
-        numero[i] = (int)(Math.random()*101);
-        if (numero[i] % 2 != 0) {
-        impar[i] = numero[i];
+        aux = (int)(Math.random()*101);
+        if (aux % 2 == 0) {
+          par[i] = aux;
+        } else {
+          impar[i] = aux;
         }
       }
 
-      for (int i = 0; i < impar.length; i++) {
-        
+      int contador = 0;
+
+      for (int i = 0; i < numero.length; i++) {
+        if (par[i] > 0) {
+          numero[contador] = par[i];
+          contador++;
+        }
+      }
+
+      for (int i = 0; i < numero.length; i++) {
+        if (impar[i] > 0) {
+          numero[contador] = impar[i];
+          contador++;
+        }
+      }
+
+      for (int i = 0; i < numero.length; i++) {
+        System.out.println(numero[i]);
       }
 
     } catch (InputMismatchException ime) {
