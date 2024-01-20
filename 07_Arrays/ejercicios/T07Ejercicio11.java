@@ -44,7 +44,7 @@ public class T07Ejercicio11 {
         numeros[i] = 0;
       }
       // Bucle para asignar a numeroFinalesSSS
-      for (int j = 2; j < num; j++) {
+      for (int j = 2; j < num;) {
         if (num % j != 0) {
           break;
         } else {
