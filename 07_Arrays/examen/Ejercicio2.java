@@ -25,7 +25,7 @@ public class Ejercicio2 {
   }
 
   /**
-   * Función para generar una tabla introduciendp números manualmente
+   * Función para generar una tabla introduciendo números manualmente
    * 
    * @param filas    int
    * @param columnas int
@@ -70,7 +70,7 @@ public class Ejercicio2 {
    * @param fila1 int
    * @param fila2 int
    */
-  public static void intercambiarFilas(int[][] tabla, int fila1, int fila2) {
+  public static void intercambiarFilas(int[][] tabla, int fila1, int fila2) {  //Se puede hacer del tiron sin bucles
     int[] aux = new int[tabla[fila1].length]; // Creamos una variable auxiliar que sera una array
     // Copiamos en el aux
     for (int i = 0; i < aux.length; i++) {

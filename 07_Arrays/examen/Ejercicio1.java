@@ -1,5 +1,5 @@
 /**
- * Ejercicio 1 Examen
+ * Ejercicio 1 Examen tema 6 y 7
  * 
  * @author Alejandro Barrionuevo Rosado
  */
@@ -10,14 +10,13 @@ public class Ejercicio1 {
     int minimoIntervalo = 0;
     int resultado;
     int intentosUsados = 0;
-    ;
     boolean ganar = false;
     int numeroIntroducido;
     int opcion = 0;
 
     do {
       // Salida por pantalla y recoger datos
-      System.out.println();
+      System.out.println();   //Era recomendable meterlo en un do while y no lo hice
       System.out.println("-D-I-V-I-N-A-R-E-M-");
       System.out.println("Divinarem pensará un número entre los valores que tu decidas");
       System.out.println();
@@ -71,6 +70,7 @@ public class Ejercicio1 {
 
       System.out.println();
 
+      //No lo controle con un do while tampoco
       // Menu para empezar otra partida o salir
       System.out.println("Elige una opcion");
       System.out.println("1. Volver a jugar");
