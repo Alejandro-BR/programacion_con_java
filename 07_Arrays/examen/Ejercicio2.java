@@ -110,9 +110,9 @@ public class Ejercicio2 {
    * @param fila  int
    * @return int
    */
-  public static int sumarFila(int[][] tabla, int fila) {
+  public static int sumarFila(int[][] tabla, int fila) {  //Error No puse la opcion de y si no tiene tabla
     int suma = 0;
-    for (int i = 0; i < tabla.length; i++) {
+    for (int i = 0; i < tabla.length; i++) {              //Error falta tabla[fila].length
       suma += tabla[fila][i];  //No se mueve la fila
     }
     return suma;
@@ -125,7 +125,7 @@ public class Ejercicio2 {
    * @param col int
    * @return int
    */
-  public static int sumarColumna(int[][] tabla, int col) {
+  public static int sumarColumna(int[][] tabla, int col) { //Error No puse la opcion de y si no tiene tabla
     int suma = 0;
     for (int i = 0; i < tabla.length; i++) {
       suma += tabla[i][col]; //No se mueve la columna
