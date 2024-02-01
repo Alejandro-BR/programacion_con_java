@@ -12,14 +12,16 @@ public class CuentaCorriente {
   //////// Atributos
   private String numero = "";
   private double saldo;
-  private String[] numeros;
+  //////// Variable auxiliares de la clase
+  private String[] numeros = new String[1000];
+  private int contador = 0;
 
   //////// Constructores
 
   /**
    * Constructor basico
    */
-  public CuentaCorriente(){
+  public CuentaCorriente() {
     generarAleatorio();
     saldo = 0;
   }
@@ -29,7 +31,7 @@ public class CuentaCorriente {
    * 
    * @param saldoInicial double
    */
-  public CuentaCorriente(double saldoInicial){
+  public CuentaCorriente(double saldoInicial) {
     generarAleatorio();
     this.saldo = saldoInicial;
   }
@@ -37,16 +39,29 @@ public class CuentaCorriente {
   /**
    * Genera el atributo numero aleatoriamente
    */
-  private void generarAleatorio(){
-    for (int i = 0; i < 10; i++) {
-      this.numero += (int)(Math.random()*10); //Concatena 10 numeros al String
-    }
+  private void generarAleatorio() {
+    boolean repetido = false;
+    do {
 
-    for (int i = 0; i < numeros.length; i++) {
-      if (this.numero == numeros[i]) {
-        
+      // Dar el valor del numero
+      for (int i = 0; i < 10; i++) {
+        this.numero += (int) (Math.random() * 10); // Concatena 10 numeros al String
       }
-    }
+
+      // Mirar si esta repetido
+      for (int i = 0; i <= this.contador; i++) {
+        if (this.numero == this.numeros[i]) {
+          repetido = true;
+        }
+      }
+
+      // Si no esta repetido se guarda en la array
+      if (repetido == false) {
+        this.contador++;
+        this.numeros[contador] = this.numero;
+      }
+
+    } while (repetido == true);
   }
 
   //////// Metodos
@@ -55,7 +70,7 @@ public class CuentaCorriente {
    * 
    * @param cantidad double
    */
-  public void ingreso (double cantidad){
+  public void ingreso(double cantidad) {
     this.saldo += cantidad;
   }
 
@@ -63,24 +78,24 @@ public class CuentaCorriente {
    * 
    * @param cantidad double
    */
-  public void cargo (double cantidad){
+  public void cargo(double cantidad) {
     this.saldo -= cantidad;
   }
 
   /**
    * 
-   * @param destino Objeto
+   * @param destino  Objeto
    * @param cantidad double
    */
-  public void transferencia (CuentaCorriente destino, double cantidad){
-    destino.saldo += cantidad; //Destino
-    this.saldo -= cantidad; //Nosotros
+  public void transferencia(CuentaCorriente destino, double cantidad) {
+    destino.saldo += cantidad; // Destino
+    this.saldo -= cantidad; // Nosotros
   }
 
   /**
    * 
    * @return String
-   */ 
+   */
   public String getNumero() {
     return numero;
   }
@@ -93,7 +108,7 @@ public class CuentaCorriente {
     return saldo;
   }
 
-  /** 
+  /**
    * 
    * @return String
    */
