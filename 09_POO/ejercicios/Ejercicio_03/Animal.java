@@ -1,5 +1,3 @@
-import Ejercicio_03.Sexo;
-
 /**
  * Clase Animal
  * 
@@ -8,7 +6,7 @@ import Ejercicio_03.Sexo;
  * Esta es la Super Clase y ademas es abtract por lo que no se le podra crear ictancias
  * 
  * 
- * Sub clases: Gato2  Ave 
+ * Sub clases: Mamifero  Ave Lagarto
  * 
  * 
  * @author Alejandro Barrionuevo Rosado
@@ -24,7 +22,7 @@ public abstract class Animal {
    * Contructor basico
    * 
    */
-  public Animal(){
+  public Animal() {
     sexo = Sexo.MACHO;
   }
 
@@ -33,32 +31,39 @@ public abstract class Animal {
    * 
    * @param s Atributo de tipo enumerado Sexo
    */
-  public Animal(Sexo s){
+  public Animal(Sexo s) {
     sexo = s;
   }
 
-    //////// Metodos
+  //////// Metodos
 
-  /** 
+  /**
    * Get del atributo sexo
    * 
    * @return Sexo
    */
-  public Sexo getSexo(){
+  public Sexo getSexo() {
     return sexo;
   }
 
   /**
    * toString
    */
-  public String toString(){
+  public String toString() {
     return "Sexo: " + this.sexo + "\n";
   }
 
   /**
-   * Metodo dormir 
+   * Metodo dormir
    */
-  public void duerme(){
+  public void duerme() {
     System.out.println("Zzzzzzz");
+  }
+
+  /**
+   * Comer
+   */
+  public void comer(String comida){
+    System.out.println("Que rico " + comida);
   }
 }

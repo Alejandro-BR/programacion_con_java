@@ -6,7 +6,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 
-package Ejercicio_03;
+package Ejercicio_03_basico;
 
 public class Casa extends Vivienda {
 

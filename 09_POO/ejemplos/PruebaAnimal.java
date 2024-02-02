@@ -1,3 +1,5 @@
+import Ejercicio_03.Sexo;
+
 /**
  * Prueba de las clase Animal y todas sus subclases
  * 

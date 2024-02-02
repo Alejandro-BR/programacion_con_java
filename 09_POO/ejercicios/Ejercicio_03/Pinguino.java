@@ -1,5 +1,3 @@
-import Ejercicio_03.Sexo;
-
 /**
  * Clase Pinguino
  * Definicion de la clase Pinguino
@@ -9,6 +7,7 @@ import Ejercicio_03.Sexo;
  * 
  * @author Alejandro Barrionuevo Rosado
  */
+
 public class Pinguino extends Ave {
 
   //////// Atributos
@@ -40,7 +39,22 @@ public class Pinguino extends Ave {
    * El pinguino se siente triste porque no puede volar
    */
   @Override
-  public void vuela(){
+  public void vuela() {
     System.out.println("No puedo volar");
+  }
+
+  /**
+   * Hace que el canario coma
+   * 
+   * @param comida
+   */
+  @Override
+  public void comer(String comida){
+    if (comida.equals("pescado")) {
+      System.out.println("Hmmmm, gracias");
+      System.out.println("Me encanta los pescado");
+    } else {
+      System.out.println("Lo siento, yo solo como pescado");
+    }
   }
 }

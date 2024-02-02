@@ -4,7 +4,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 
-package Ejercicio_03;
+package Ejercicio_03_basico;
 
 public class T09Ejercicio03 {
   public static void main(String[] args) {

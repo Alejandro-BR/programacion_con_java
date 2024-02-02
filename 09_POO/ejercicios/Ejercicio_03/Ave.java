@@ -1,5 +1,3 @@
-import Ejercicio_03.Sexo;
-
 /**
  * Clase Ave
  * Definicion de la clase Ave
@@ -10,7 +8,8 @@ import Ejercicio_03.Sexo;
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-public class Ave extends Animal {
+
+public abstract class Ave extends Animal {
 
   //////// Atributos
   // No tiene atributos propios solo heredados
@@ -49,5 +48,15 @@ public class Ave extends Animal {
    */
   public void vuela(){
     System.out.println("Estoy volando");
+  }
+
+  @Override
+  public void comer(String comida){
+    if (comida.equals("insectos")) {
+      System.out.println("Hmmmm, gracias");
+      System.out.println("Me encanta los insectos");
+    } else {
+      System.out.println("Lo siento, yo solo como insectos");
+    }
   }
 }

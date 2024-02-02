@@ -1,14 +1,14 @@
-import Ejercicio_03.Sexo;
-
 /**
  * Clase Gato2
  * Definicion de la clase gato
  * 
- * Sub clase de Animal
+ * Sub clase de la calse mamifero
+ * Que a su vez es sub clase de la clase Animal
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-public class Gato2 extends Animal {
+
+public class Gato extends Mamifero {
 
   //////// Atributos
   private String raza;
@@ -20,7 +20,7 @@ public class Gato2 extends Animal {
    * @param s    Sexo
    * @param raza String
    */
-  public Gato2(Sexo s, String raza) {
+  public Gato(Sexo s, String raza) {
     super(s);
     this.raza = raza;
   }
@@ -31,7 +31,7 @@ public class Gato2 extends Animal {
    * 
    * @param raza String
    */
-  public Gato2(String raza) {
+  public Gato(String raza) {
     super(Sexo.HEMBRA);
     this.raza = raza;
   }
@@ -42,7 +42,7 @@ public class Gato2 extends Animal {
    * 
    * @param s Sexo
    */
-  public Gato2(Sexo s) {
+  public Gato(Sexo s) {
     super(s);
     raza = "Siames";
   }
@@ -53,7 +53,7 @@ public class Gato2 extends Animal {
    * Sexo: Hembra
    * Raza: Siames
    */
-  public Gato2() {
+  public Gato() {
     super(Sexo.HEMBRA);
     raza = "Siames";
   }
@@ -89,7 +89,8 @@ public class Gato2 extends Animal {
    * 
    * @param comida String de la comida que se le ofrece
    */
-  public void come(String comida){
+  @Override
+  public void comer(String comida){
     if (comida.equals("pescado")) {
       System.out.println("Hmmmm, gracias");
       System.out.println("Me encanta el pescado");
@@ -104,7 +105,7 @@ public class Gato2 extends Animal {
    * 
    * @param contrincante Clase Gato2
    */
-  public void peleaCon(Gato2 contrincante){
+  public void peleaCon(Gato contrincante){
     if (this.getSexo() == Sexo.HEMBRA) {
       System.out.println("No me gusta pelear");
     } else {
