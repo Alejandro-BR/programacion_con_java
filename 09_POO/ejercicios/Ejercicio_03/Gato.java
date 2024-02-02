@@ -7,7 +7,7 @@
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-
+package Ejercicio_03;
 public class Gato extends Mamifero {
 
   //////// Atributos

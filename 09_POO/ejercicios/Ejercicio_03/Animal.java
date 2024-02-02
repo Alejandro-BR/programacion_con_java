@@ -12,6 +12,8 @@
  * @author Alejandro Barrionuevo Rosado
  */
 
+package Ejercicio_03;
+
 public abstract class Animal {
 
   //////// Atributos

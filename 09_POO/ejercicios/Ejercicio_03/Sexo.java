@@ -12,7 +12,7 @@
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-
+package Ejercicio_03;
 public enum Sexo {
   MACHO, HEMBRA, HERMAFRODITA
 }

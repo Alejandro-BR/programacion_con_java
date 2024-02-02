@@ -7,7 +7,7 @@
  * 
  * @author Alejandro Barrionuevo Rosado
  */
-
+package Ejercicio_03;
 public class Pinguino extends Ave {
 
   //////// Atributos
