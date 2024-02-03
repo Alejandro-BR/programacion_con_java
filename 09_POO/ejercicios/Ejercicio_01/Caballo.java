@@ -1,19 +1,17 @@
 /**
- * Clase Caballo
+ * SubClase Caballo
  * 
  * @author Alejandro Barrionuevo Rosado
  */
 
 package Ejercicio_01;
 
-public class Caballo {
+public class Caballo extends Animal {
 
   //////// Atributos
   private String color;
-  private int edad;
   private String raza;
   private String nombre;
-  private String sexo;
   private String[] comida = {"Pasto", "Zanaorias", "Algarrobas"};
 
 
@@ -28,24 +26,10 @@ public class Caballo {
    * @param nombre String
    */
   public Caballo(String color, int edad, String raza, String nombre, String sexo) {
+    super(sexo, edad);
     this.color = color;
-    this.edad = edad;
     this.raza = raza;
     this.nombre = nombre;
-    this.sexo = sexo;
-  }
-
-  /**
-   * Contructor sin nombre y sin sexo
-   * 
-   * @param color String
-   * @param edad int
-   * @param raza String
-   */
-  public Caballo(String color, int edad, String raza) {
-    this.color = color;
-    this.edad = edad;
-    this.raza = raza;
   }
 
   //////// Metodos
@@ -54,10 +38,6 @@ public class Caballo {
 
   public String getColor() {
     return color;
-  }
-
-  public int getEdad() {
-    return edad;
   }
 
   public String getRaza() {
@@ -76,10 +56,6 @@ public class Caballo {
 
   public void setColor(String color) {
     this.color = color;
-  }
-
-  public void setEdad(int edad) {
-    this.edad = edad;
   }
 
   public void setRaza(String raza) {
@@ -129,7 +105,7 @@ public class Caballo {
    */
   @Override
   public String toString() {
-    return "Color = " + color + ", edad = " + edad + ", raza = " + raza + ", nombre = " + nombre + ", sexo = " + sexo;
+    return "Color = " + color + ", edad = " + getEdad() + ", raza = " + raza + ", nombre = " + nombre + ", sexo = " + getSexo();
   }
 
 }

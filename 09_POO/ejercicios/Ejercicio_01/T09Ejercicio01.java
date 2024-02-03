@@ -9,10 +9,10 @@ package Ejercicio_01;
 
 public class T09Ejercicio01 {
   public static void main(String[] args) {
-    Caballo caballo1 = new Caballo("Negro", 15, "Pura sangre");
+    Caballo caballo1 = new Caballo("Negro", 20, "Pura sangre", "Tornado", "Macho");
     caballo1.setNombre("Tornado");
     System.out.println(caballo1.getNombre());
-    int edad =  caballo1.getEdad();
+    // int edad =  caballo1.getEdad();
 
     System.out.println();
 
