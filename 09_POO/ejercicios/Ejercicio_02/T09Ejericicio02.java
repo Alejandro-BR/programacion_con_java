@@ -38,18 +38,45 @@ public class T09Ejericicio02 {
         System.out.print("Elige una opción (1-8):");
         menu = Integer.parseInt(System.console().readLine());
         System.out.println();
-      } while ((menu <= 8) && (menu >= 1) );
+      } while ((menu >= 8) && (menu <= 1) );
   
       switch (menu) {
         case 1:
           System.out.print("Introduce cuantos kilometros andaras: ");
           kilometros = Double.parseDouble(System.console().readLine());
           bicicleta1.andar(kilometros);
+          System.out.println();
+          break;
+        case 2:
+          bicicleta1.Caballito();
+          System.out.println();
+          break;
+        case 3: 
+          System.out.print("Introduce cuantos kilometros andaras: ");
+          kilometros = Double.parseDouble(System.console().readLine());
+          coche1.andar(kilometros);
+          System.out.println();
+          break;
+        case 4:
+          coche1.quemarRueda();
+          System.out.println();
+          break;
+        case 5: 
+          System.out.println("Bicicleta: " + bicicleta1.getKilometrosRecorridos() + " km");
+          System.out.println();
+          break;
+        case 6: 
+          System.out.println("Coche: " + coche1.getKilometrosRecorridos()+ " km");
+          System.out.println();
+          break;
+        case 7:
+          System.out.println("Kilometros totales: " + Vehiculo.getKilometrosTotales());
           break;
         default:
+          salir = true;
           break;
       }
-    } while (salir);
+    } while (salir == false);
 
   }
 

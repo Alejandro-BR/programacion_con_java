@@ -62,6 +62,7 @@ public abstract class Vehiculo {
    * @param kilometros double
    */
   public void andar(double kilometros) {
-    sumarKilometrosTotales(kilometros);
+    this.kilometrosRecorridos += kilometros;  //suma los kilometros
+    sumarKilometrosTotales(kilometros); //los paso a kilometrosTotales
   }
 }
