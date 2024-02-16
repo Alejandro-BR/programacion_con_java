@@ -49,7 +49,7 @@ public class Coleccion {
     int respuesta2;
 
     for (int i = 0; i < coleccion.length; i++) {
-      if (coleccion[i].getCodigo() == "LIBRE") {
+      if (coleccion[i].getCodigo().equals("LIBRE")) {
         indice = i;
         vacio = true;
         break;
@@ -71,7 +71,7 @@ public class Coleccion {
         System.out.print("Introduce el codigo: ");
         respuesta1 = System.console().readLine();
         for (int i = 0; i < coleccion.length; i++) {
-          if (respuesta1 == coleccion[i].getCodigo()) {
+          if (coleccion[i].getCodigo().equals(respuesta1)) {
             unico = false;
             System.out.println("\nEl codigo ya existe.\n");
             break;
@@ -112,7 +112,7 @@ public class Coleccion {
     String codigo = System.console().readLine();
     
     for (int i = 0; i < coleccion.length; i++) {
-      if (codigo == coleccion[i].getCodigo()) {
+      if (coleccion[i].getCodigo().equals(codigo)) {
         indice = i;
         libre = true;
         break;
