@@ -1,10 +1,11 @@
-import java.util.ArrayList;
-
 /**
  * Ejemplo con objetos
  * 
  * @author Alejandro Barrionuevo Rosado
  */
+
+import java.util.ArrayList;
+
 
 public class EjemploArrayList09 {
   public static void main(String[] args) {
