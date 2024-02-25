@@ -5,7 +5,7 @@
  * @author Alejandro Barrionuevo Rosado
  */
 
-package Ejercicio02;
+package Ejercicio03;
 
 import java.util.ArrayList;
 import java.util.Collections;
