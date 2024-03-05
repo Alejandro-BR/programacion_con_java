@@ -54,7 +54,7 @@ public class Perro extends Mascota {
   /**
    * Hacer que el perro gruña.
    */
-  public void gurñir() {
+  public void gurnir() {
     System.out.println("Grrrrr...");
   }
 
@@ -80,7 +80,7 @@ public class Perro extends Mascota {
       System.out.println(getNombre() + " se encuentra vacunado/a.");
     } else {
       super.vacunar();
-      gurñir();
+      gurnir();
     }
   }
 

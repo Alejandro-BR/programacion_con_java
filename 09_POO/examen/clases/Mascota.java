@@ -13,7 +13,7 @@ public abstract class Mascota implements MascotaInterface {
   private String chip;
   private String nombre;
   private int edad;
-  private boolean vacunada = false;
+  private boolean vacunada;
   //////// Atributo statico
   private static int totalMascotas = 0;
 
@@ -33,6 +33,7 @@ public abstract class Mascota implements MascotaInterface {
   public Mascota(String chip, String nombre) {
     this.chip = chip;
     this.nombre = nombre;
+    this.vacunada = false;
     totalMascotas++;
   }
 
@@ -47,6 +48,7 @@ public abstract class Mascota implements MascotaInterface {
    */
   public Mascota(String chip) {
     this.chip = chip;
+    this.vacunada = false;
     totalMascotas++;
   }
 

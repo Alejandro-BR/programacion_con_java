@@ -9,6 +9,7 @@ package clases;
 
 public class Clinica {
   //////// Atributos
+  private final int N = 100;
   private Mascota[] listado;
 
   //////// Contructor
@@ -19,7 +20,7 @@ public class Clinica {
    * para que pueda albergar 100 mascotas.
    */
   public Clinica() {
-    listado = new Mascota[100];
+    listado = new Mascota[N];
   }
 
   //////// Metodos
@@ -93,7 +94,7 @@ public class Clinica {
    */
   public Mascota buscarChip(String chip) {
     for (Mascota mascota : listado) {
-      if (mascota.getChip().equals(chip)) {
+      if (mascota != null && mascota.getChip().equals(chip)) {
         return mascota; //Devuelve la mascota
       }
     }
