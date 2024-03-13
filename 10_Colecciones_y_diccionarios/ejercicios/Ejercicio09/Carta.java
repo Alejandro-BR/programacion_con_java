@@ -6,11 +6,11 @@
 
 package Ejercicio09;
 
-public class Carta {
+public class Carta implements Comparable<Carta> {
 
   //////// Atributos
   private static String[] palos = { "Oros", "Copas", "Espadas", "Bastos" }; // Oros, Copas, Espadas y Bastos.
-  private static String[] numeros = { "1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey" }; 
+  private static String[] numeros = { "1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo", "Rey" };
   private String valor;
   private String palo;
 
@@ -20,8 +20,8 @@ public class Carta {
    * 
    */
   public Carta() {
-    this.palo = palos[(int)(Math.random()*4)];
-    this.valor = numeros[(int)(Math.random()*10)];
+    this.palo = palos[(int) (Math.random() * 4)];
+    this.valor = numeros[(int) (Math.random() * 10)];
   }
 
   //////// Metodos
@@ -41,5 +41,22 @@ public class Carta {
   public String getPalo() {
     return palo;
   }
-  
+
+  /**
+   * 
+   * CompareTo
+   * 
+   * Sacado de la solucion del libro
+   * 
+   * @param c Carta
+   * @return int
+   */
+  @Override
+  public int compareTo(Carta c) {
+    if (palo.equals(c.getPalo())) {
+      return valor.compareTo(c.getValor());
+    } else {
+      return palo.compareTo(c.getPalo());
+    }
+  }
 }
