@@ -12,38 +12,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainCarta {
-
-  /**
-   * Funcion para comprobar que ya este en la ArrayList un objeto
-   * 
-   * @param baraja ArrayList Carta
-   * @param carta  Carta
-   * @param indice int
-   * @return true --> el objeto se repite
-   * @return false --> el objeto no se repite
-   */
-  private static boolean repetido(ArrayList<Carta> baraja, Carta carta) {
-    for (int i = 0; i < baraja.size(); i++) {
-      if (baraja.get(i).getPalo() == carta.getPalo()) {
-        if (baraja.get(i).getValor() == carta.getValor()) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-
   public static void main(String[] args) {
+    final int TOTAL_CARTAS = 10;
     ArrayList<Carta> baraja = new ArrayList<>();
 
     Carta c = new Carta();
     baraja.add(c);
 
-    for (int i = 1; i < 9; i++) {
+    for (int i = 1; i < TOTAL_CARTAS; i++) {
       do {
-        c = new Carta();
-      } while (repetido(baraja, c)); // repetido(baraja,c)
-      // baraja.contains(c) no funciona para objetos bien
+        c = new Carta(); //Nueva carta
+      } while (baraja.contains(c)); // Mientras la baraja contenga la carta se repite
       baraja.add(c);
     }
 

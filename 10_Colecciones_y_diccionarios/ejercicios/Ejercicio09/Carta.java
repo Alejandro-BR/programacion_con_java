@@ -42,6 +42,27 @@ public class Carta implements Comparable<Carta> {
     return palo;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    // Filtros
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    // Es una carta pues 
+    Carta other = (Carta) obj;
+    if (!valor.equals(other.valor)){
+      // No esta repetida
+      return false;
+    }
+    if (!palo.equals(other.palo)) {
+      // No esta repetida
+      return false;
+    }
+    // Esta repetida la carta 
+    return true;
+  }
+
   /**
    * 
    * CompareTo
