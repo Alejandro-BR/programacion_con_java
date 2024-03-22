@@ -13,30 +13,12 @@
  * Se debe preguntar por los códigos y las cantidades de cada artículo que
  * se quiere comprar. Aplica un 21% de IVA.
  * 
- * Programa original:
- * 
- * Crea el programa GESTISIMAL (GESTIón SIMplificada de Almacén) para llevar el
- * control de los artículos de un almacén. De cada artículo se debe saber el código,
- * la descripción, el precio de compra, el precio de venta y el stock (número de
- * unidades). El menú del programa debe tener, al menos, las siguientes opciones:
- * 
- * 1. Listado
- * 2. Alta
- * 3. Baja
- * 4. Modificación
- * 5. Entrada de mercancía
- * 6. Salida de mercancía
- * 7. Salir
- * 
- * La entrada y salida de mercancía supone respectivamente el incremento y
- * decremento de stock de un determinado artículo. Hay que controlar que no
- * se pueda sacar más mercancía de la que hay en el almacén.
- * 
- * 
  * @author Alejandro Barrionuevo Rosado
  */
 
 package Ejercicio13;
+
+import java.util.ArrayList;
 
 public class Gestisimal {
 
@@ -102,7 +84,7 @@ public class Gestisimal {
    * @return stock int
    */
   private static int introduceStock() {
-    System.out.print("\nIntroduce el stock: ");
+    System.out.print("Introduce el stock: ");
     int stock = Integer.parseInt(System.console().readLine());
     System.out.println();
     return stock;
@@ -159,6 +141,7 @@ public class Gestisimal {
       indice = Integer.parseInt(System.console().readLine());
     } while (indice < 1 || indice > (almacen.getArticulos().size() + 1));
 
+    indice -= 1;
     int menu;
 
     System.out.println("\nQue quiereres modificar: ");
@@ -184,26 +167,155 @@ public class Gestisimal {
           articulo = new Articulo(codigo);
         } while (!almacen.getArticulos().contains(articulo));
 
-        almacen.getArticulos().get(indice - 1).setCodigo(codigo); // Modifica el codigo
+        almacen.modificacionCodido(indice, codigo); // Modifica el codigo
         break;
       case 2:
         String descripcion = introduceDescripcion();
-        almacen.getArticulos().get(indice - 1).setDescripcion(descripcion); // Modifica la descripcion
+        almacen.modificacionDescripcion(indice, descripcion); // Modifica la descripcion
         break;
       case 3:
         double precioCompra = introducePrecioCompra();
-        almacen.getArticulos().get(indice - 1).setPrecioCompra(precioCompra); // Modifica el precio de compra
+        almacen.modificacionPrecioCompra(indice, precioCompra); // Modifica el precio de compra
         break;
       case 4:
         double precioVenta = introducePrecioCompra();
-        almacen.getArticulos().get(indice - 1).setPrecioVenta(precioVenta); // Modifica el precio de venta
+        almacen.modificacionPrecioVenta(indice, precioVenta); // Modifica el precio de venta
         break;
       case 5:
         int stock = introduceStock();
-        almacen.getArticulos().get(indice - 1).setStock(stock); // Modifica el stock
+        almacen.modificacionStock(indice, stock); // Modifica el stock
         break;
     }
   }
+
+  /**
+   * aumento:
+   * 
+   * Cuanto stock entra.
+   * 
+   * @return stock aumentado int
+   */
+  private static int aumento() {
+    int aumento = 0;
+    do {
+      System.out.print("Introduce cuanto stock entrara: ");
+      aumento = Integer.parseInt(System.console().readLine());
+    } while (aumento > 0);
+    return aumento;
+  }
+
+  /**
+   * articuloQueAumenta
+   * 
+   * Pide el codigo y busca el indice para ese articulo.
+   * 
+   * @param almacen Almacen
+   * @return indice int
+   */
+  private static int articuloQueAumenta(Almacen almacen) {
+    int indice = 0;
+    int codigo;
+    Articulo aux;
+    do {
+      codigo = introduceCodigo();
+      aux = new Articulo(codigo);
+    } while (almacen.getArticulos().contains(aux));
+
+    for (Articulo articulo : almacen.getArticulos()) {
+      if (articulo.getCodigo() == codigo) {
+        return indice;
+      }
+      indice++;
+    }
+    return -1;
+  }
+
+  /**
+   * venta:
+   * 
+   * Gestiona todo lo relacionado con la venta
+   * de un articulo y la llamada al metodo ticket.
+   * 
+   * @param almacen Almacen
+   */
+  private static void venta(Almacen almacen) {
+    boolean salir = false;
+    ArrayList<Articulo> articulosVendidos = new ArrayList<>();
+    ArrayList<Integer> cantidades = new ArrayList<>();
+
+    do {
+      System.out.println("\nVentas:");
+      int codigo = introduceCodigo();
+
+      // Obtener el indice del articulo en el almacen
+      int indice = -1;
+      for (int i = 0; i < almacen.getArticulos().size(); i++) {
+        if (almacen.getArticulos().get(i).getCodigo() == codigo) {
+          indice = i;
+          break;
+        }
+      }
+
+      if (indice == -1) {
+        System.out.println("El articulo  no se encuentra en el almacen.");
+      } else {
+        System.out.print("Introduce la cantidad a vender: ");
+        int cantidad = Integer.parseInt(System.console().readLine());
+
+        if ((almacen.getArticulos().get(indice).getStock() - cantidad) < 0) {
+          System.out.println("No hay suficiente stock para realizar la venta.");
+        } else {
+          almacen.venta(indice, cantidad); // Llamar al metodo venta de Almacen
+          cantidades.add(cantidad); // Agregar la cantidad
+          articulosVendidos.add(almacen.getArticulos().get(indice)); // Agregar el articulo
+        }
+      }
+
+      // Preguntar al usuario si desea realizar otra venta
+      System.out.print("Nueva venta (si - 1 /no - 2): ");
+      int respuesta = Integer.parseInt(System.console().readLine());
+      if (respuesta == 2) {
+        salir = true;
+      } else if (respuesta == 1) {
+        salir = false;
+      }
+
+    } while (!salir);
+
+    // Imprimir el ticket
+    ticket(cantidades, articulosVendidos, almacen);
+  }
+
+
+  /**
+   * ticket:
+   * 
+   * Genera un ticket.
+   * 
+   * @param cantidades Integer[]
+   * @param articulosVendidos Articulo[]
+   * @param almacen Almacen
+   */
+  private static void ticket(ArrayList<Integer> cantidades, ArrayList<Articulo> articulosVendidos, Almacen almacen){
+    double total = 0;
+    double precioArticulos;
+
+    System.out.println("\nTICKET DE VENTA\n");
+    System.out.println("--------------------------------------------");
+    for (int i = 0; i < articulosVendidos.size(); i++) {
+      System.out.println("Artículo: " + articulosVendidos.get(i).getDescripcion());
+      precioArticulos = (articulosVendidos.get(i).getPrecioVenta() * 1.21);
+      System.out.printf("Precio unitario (con IVA): %.2f\n", precioArticulos);
+      precioArticulos = (articulosVendidos.get(i).getPrecioVenta() * 1.21) * cantidades.get(i);
+      System.out.printf("Subtotal (con IVA): %.2f\n", precioArticulos);
+      total += precioArticulos;
+      System.out.println("--------------------------------------------");
+    }
+    System.out.printf("Total de la venta: %.2f\n\n", total);
+}
+
+
+  ///////////////////////////  Main  ////////////////////////////////// 
 
   public static void main(String[] args) {
     Almacen almacen = new Almacen();
@@ -242,6 +354,15 @@ public class Gestisimal {
           break;
         case 4:
           // Modificar un articulo
+          modificacion(almacen);
+          break;
+        case 5:
+          // Entrada de mercancia
+          almacen.entrada(articuloQueAumenta(almacen), aumento());
+          break;
+        case 6:
+          // Venta
+          venta(almacen);
           break;
         case 7:
           System.out.println("Saliendo del programa...");

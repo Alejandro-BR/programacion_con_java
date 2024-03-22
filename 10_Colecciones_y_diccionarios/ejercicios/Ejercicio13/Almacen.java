@@ -18,7 +18,7 @@ public class Almacen {
   /**
    * Contructor de Almacen
    */
-  public Almacen(){
+  public Almacen() {
     this.articulos = new ArrayList<>();
   }
 
@@ -29,7 +29,7 @@ public class Almacen {
    * 
    * Llama al toString de cada uno de los articulos.
    */
-  public void listado(){
+  public void listado() {
     for (Articulo articulo : articulos) {
       System.out.println(articulo);
     }
@@ -40,7 +40,7 @@ public class Almacen {
    * 
    * Llama al toString de cada uno de los articulos con un indice.
    */
-  public void listadoNumerados(){
+  public void listadoNumerados() {
     for (int i = 0; i < articulos.size(); i++) {
       System.out.println((i + 1) + " - " + articulos.get(i));
     }
@@ -66,6 +66,92 @@ public class Almacen {
    */
   public void baja(Articulo articulo) {
     this.articulos.remove(articulo);
+  }
+
+  /**
+   * modificacionCodigo:
+   * 
+   * Modifica el codigo de un articulo.
+   * 
+   * @param indice int
+   * @param codigo int
+   */
+  public void modificacionCodido(int indice, int codigo) {
+    articulos.get(indice).setCodigo(codigo);
+  }
+
+  /**
+   * modificacionDescripcion:
+   * 
+   * Modifica la descripcion de un articulo.
+   * 
+   * @param indice      int
+   * @param descripcion String
+   */
+  public void modificacionDescripcion(int indice, String descripcion) {
+    articulos.get(indice).setDescripcion(descripcion);
+  }
+
+  /**
+   * modificacionPrecioCompra:
+   * 
+   * Modifica el precio de compra de un articulo.
+   * 
+   * @param indice       int
+   * @param precioCompra double
+   */
+  public void modificacionPrecioCompra(int indice, double precioCompra) {
+    articulos.get(indice).setPrecioCompra(precioCompra);
+  }
+
+  /**
+   * modificacionPrecioVenta:
+   * 
+   * Modifica el precio de venta de un articulo.
+   * 
+   * @param indice       int
+   * @param precioCompra double
+   */
+  public void modificacionPrecioVenta(int indice, double precioVenta) {
+    articulos.get(indice).setPrecioVenta(precioVenta);
+  }
+
+  /**
+   * modificacionStock:
+   * 
+   * Modifica el stock de un articulo.
+   * 
+   * @param indice int
+   * @param stock  int
+   */
+  public void modificacionStock(int indice, int stock) {
+    articulos.get(indice).setStock(stock);
+  }
+
+  /**
+   * entrada:
+   * 
+   * Aumento del stock de un articulo.
+   * 
+   * @param indice  int
+   * @param aumento int
+   */
+  public void entrada(int indice, int aumento) {
+    int stock = this.articulos.get(indice).getStock();
+    this.articulos.get(indice).setStock(stock + aumento);
+  }
+
+  /**
+   * venta:
+   * 
+   * Decremento del stock de un articulo.
+   * 
+   * @param indice  int
+   * @param restado int
+   */
+  public void venta(int indice, int restado) {
+    int stock = this.articulos.get(indice).getStock();
+    this.articulos.get(indice).setStock(stock - restado);
   }
 
   /**

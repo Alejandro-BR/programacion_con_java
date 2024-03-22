@@ -48,7 +48,7 @@ public class Articulo {
    */
   @Override
   public String toString() {
-    return "Articulo " + codigo + ", descripcion = " + descripcion + ", precio de compra = " + precioCompra
+    return "Articulo " + codigo + ", " + descripcion + ", precio de compra = " + precioCompra
         + ", precio de venta = " + precioVenta + ", stock = " + stock + " ";
   }
 
@@ -67,11 +67,8 @@ public class Articulo {
     return true;
   }
 
-  /**
-   * getCodigo
-   * 
-   * @return codigo int
-   */
+  // Getter y setter 
+
   public int getCodigo() {
     return codigo;
   }
@@ -111,7 +108,4 @@ public class Articulo {
   public void setStock(int stock) {
     this.stock = stock;
   }
-
-  
-
 }
