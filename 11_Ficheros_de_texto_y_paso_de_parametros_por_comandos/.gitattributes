@@ -1,0 +1,3 @@
+# Usar LF para archivos de texto
+*.txt text eol=lf
+
