@@ -11,6 +11,7 @@
  */
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -21,17 +22,29 @@ public class Ejemplo03 {
     System.out.println("naranja");
     System.out.println("mango");
     System.out.println("chirimoya");
-    // Despues se comprueba que es lo que queremos
+    System.out.println("platano");
+    // Después se comprueba que es lo que queremos
 
     try {
-      BufferedWriter bw = new BufferedWriter(new FileWriter("fruta.txt"));
+      // Definir la ruta del archivo
+      String rutaArchivo = "ejemplos\\ficheros\\fruta.txt";
 
-      // Y ya se descomenta el codigo y se escribe en el fichero
+      // Crear el objeto File con la ruta especificada
+      File archivo = new File(rutaArchivo);
+
+      // Imprimir la ruta absoluta para verificación
+      System.out.println("Ruta absoluta del archivo: " + archivo.getAbsolutePath());
+
+      // Crear el BufferedWriter para escribir en el archivo
+      BufferedWriter bw = new BufferedWriter(new FileWriter(archivo));
+
+      // Y ya se descomenta el código y se escribe en el fichero
       bw.write("naranja\n");
       bw.write("mango\n");
       bw.write("chirimoya\n");
+      bw.write("platano\n");
 
-      // Y lo mas importante se cierra el fichero
+      // Y lo más importante se cierra el fichero
       bw.close();
     } catch (IOException ioe) {
       System.out.println("No se ha podido escribir en el fichero");
