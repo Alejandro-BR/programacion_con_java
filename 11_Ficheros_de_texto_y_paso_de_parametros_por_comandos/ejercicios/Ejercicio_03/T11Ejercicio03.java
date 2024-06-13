@@ -55,9 +55,30 @@ public class T11Ejercicio03 {
   public static void main(String[] args) {
 
     // Rutas
-    String rutaPrimerFichero = RUTA_BASE + leerPorPantalla(PRIMERO);
-    String rutaSegundoFichero = RUTA_BASE + leerPorPantalla(SEGUNDO);
-    String rutaFicheroDestino = RUTA_BASE + leerPorPantalla(DESTINO);
+    String rutaPrimerFichero = RUTA_BASE;
+    String rutaSegundoFichero = RUTA_BASE;
+    String rutaFicheroDestino = RUTA_BASE;
+
+    // Si no recibe argumentos se le pediran dentro del programa
+    if (args.length == 0) {
+
+      rutaPrimerFichero += leerPorPantalla(PRIMERO);
+      rutaSegundoFichero += leerPorPantalla(SEGUNDO);
+      rutaFicheroDestino += leerPorPantalla(DESTINO);
+
+    // Si reciben los tres argumentos se utilizaran
+    } else if (args.length == 3) {
+
+      rutaPrimerFichero += args[0];
+      rutaSegundoFichero += args[1];
+      rutaFicheroDestino += args[3];
+
+    // Si recibe una cantida distinta de argumentos se mandara un mensaje de error
+    } else {
+
+      System.out.println("Uso del programa: java T11Ejercicio03 FICHERO_ENTRADA1 FICHERO_ENTRADA2 FICHERO_SALIDA");
+      System.exit(0);
+    }
 
     try {
 
