@@ -1,0 +1,7 @@
+Esta es la primera linea del primer fichero.
+Esta es la primera linea del segundo fichero.
+Esta es la segunda linea del primer fichero.
+Esta es la segunda linea del segundo fichero.
+Esta es la tercera linea del primer fichero.
+Esta es la tercera linea del segundo fichero.
+Esta es la cuarta linea del primer fichero.
