@@ -12,3 +12,7 @@ Curso 2023/2024
 <br>
 
 <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="80" height="80"/></a>
+
+<br>
+
+![Hello World](/01_Salida_de_datos_por_pantalla/ejemplos/img/HelloWorld.png)
