@@ -1,0 +1,45 @@
+Pikachu N.º 0025
+ 
+Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas.
+
+Cuando varios de estos Pokémon se juntan, su energía puede causar fuertes tormentas.
+ 
+Tipo -> Eléctrico
+
+Debilidad -> Tierra
+
+- - - - - - - - - - - - - - - - - - - - - - -
+
+Raichu N.º 0026
+
+Su cola actúa como toma de tierra y descarga electricidad al suelo, lo que le protege de los calambrazos.
+
+Si las bolsas de sus mejillas se cargan por completo de electricidad, se le ponen las orejas de punta.
+
+Tipo -> Eléctrico
+
+Debilidad -> Tierra
+
+- - - - - - - - - - - - - - - - - - - - - - -
+
+Charizard N.º 0006
+
+Cuando se enfurece de verdad, la llama de la punta de su cola se vuelve de color azul claro.
+
+Utiliza las alas para volar a gran altura. Cuanta más experiencia gane en batalla, mayor será la temperatura de sus llamas.
+
+Tipo -> Fuego y Volador
+
+Debilidad -> Agua Eléctrico y Roca (* 4)
+
+- - - - - - - - - - - - - - - - - - - - - - -
+
+Blastoise N.º 0009
+
+Aumenta de peso deliberadamente para contrarrestar la fuerza de los chorros de agua que dispara.
+
+Un Pokémon imponente que usa los cañones que tiene en el caparazón para propulsarse con la potencia de un cohete.
+
+Tipo -> Agua
+
+Debilidad -> Planta y Eléctrico
